@@ -11,17 +11,17 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 A plugin that provides the ability to publish post from frontend with or without login using a simple html5 form.
 
 == Description ==
-<strong>Anonymous posting</strong>(guest posting / front end posting / posting without login) – is made easy with <strong>AccessPress Anonymous Post</strong>.
+<strong>Anonymous posting</strong>(guest posting / front end posting / posting without login) - is made easy with <strong>AccessPress Anonymous Post</strong>.
 
-<strong>AccessPress Anonymous Post</strong> – is a responsive HTML5 form to allow your website users (guests/visitors/not logged in users) to submit a Standard WordPress Post in an easy and customized way, including featured image.
+<strong>AccessPress Anonymous Post</strong> - is a responsive HTML5 form to allow your website users (guests/visitors/not logged in users) to submit a Standard WordPress Post in an easy and customized way, including featured image.
 
-If you’re looking for Free WordPress guest post plugin, User Post Plugin, Anonymous post plugin, Front end post plugin, Guest Author plugin, Frontend form post feature, Guest blogging plugin, User submitted post then <strong>AccessPress Anonymous Post</strong> is the right one!
+If you're looking for Free WordPress guest post plugin, User Post Plugin, Anonymous post plugin, Front end post plugin, Guest Author plugin, Frontend form post feature, Guest blogging plugin, User submitted post then <strong>AccessPress Anonymous Post</strong> is the right one!
 
 <strong>Features:</strong>
 
 * Submit post from frontend as a not logged in user or as a logged in user.
 * Enter Tags for the post
-* Plugin option page – User can customize settings.
+* Plugin option page - User can customize settings.
 * Email notification to admin email after successful post submission.
 * Customized Post Submission message.
 * Field Selection ability.
@@ -45,8 +45,10 @@ If you’re looking for Free WordPress guest post plugin, User Post Plugin, Anonym
 For a easy installation guide checkout the Installation tab above.
 
 For complete information and documentation regarding plugin,please visit below links.
-* [Plugin information](http://accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post/)
-* [Docs](http://accesspressthemes.com/wordpress-plugin-instruction-anonymous-post/ )
+
+[Plugin information](http://accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post/)
+
+[Docs](http://accesspressthemes.com/wordpress-plugin-instruction-anonymous-post/ )
 
 == Installation ==
 1. Unzip accesspress-anonymous-post.zip
