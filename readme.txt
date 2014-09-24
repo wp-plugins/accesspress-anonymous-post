@@ -1,10 +1,10 @@
 === AccessPress Anonymous Post ===
 Contributors: access-keys
-Tags: Guest Post,User PostAnonymous post,Front end post,Guest Author,Frontend form post,Frontend form,Form post,Guest blog,Guest blogging,User submitted post
+Tags: Guest Post,User Post,Anonymous post,Front end post,Guest Author,Frontend form post,Frontend form,Form post,Guest blog,Guest blogging,User submitted post,Post, plugin, posts, shortcode
 Donate link: http://accesspressthemes.com/donation/
 Requires at least: 3.8
 Tested up to: 4.0
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,17 @@ If you're looking for Free WordPress guest post plugin, User Post Plugin, Anonym
 * Online chat support
 * Email support
 * Premium upgrades available
+
+<iframe width="420" height="315" src="//www.youtube.com/embed/TjZNcVG3fDE" frameborder="0" allowfullscreen></iframe>
+
+##  Some Useful Links ##
+* <strong>Support Email</strong>: support@accesspressthemes.com
+* <strong>Support Forum Link</strong>: http://accesspressthemes.com/support/
+* <strong>Website Link</strong>: http://accesspressthemes.com/
+* <strong>Youtube channel link</strong>: https://www.youtube.com/watch?v=TjZNcVG3fDE
+* <strong>Facebook link</strong>: https://www.facebook.com/AccessPressThemes 
+
+
 
 For a easy installation guide checkout the Installation tab above.
 
@@ -83,6 +94,9 @@ Once you install the plugin , you can check some general documentation about how
 4. Frontend Form 
 
 == Changelog ==
+= 1.0.2 =
+* Small Bug fixed for redirect url  post submission message shortcode 
+
 = 1.0.1 =
 * Plugin Approved and committed to http://wordpress.org plugin repository
  

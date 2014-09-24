@@ -4,7 +4,7 @@ defined('ABSPATH') or die("No script kiddies please!");
  * Plugin Name:AccessPress Anonymous Post
  * Plugin URI: http://accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post/
  * Description: A plugin that provides the ability to publish post from frontend with or without login anonymously using a simple html5 form from anywhere of the site with the help of shortcode and handful of backend settings.
- * Version:1.0.1
+ * Version:1.0.2
  * Author:AccessPress Themes
  * Author URI:http://accesspressthemes.com/
  * License:GPLv2 or later
@@ -322,9 +322,13 @@ defined('ABSPATH') or die("No script kiddies please!");
        //shortcode for showing the message in any redirected page after successful post submission
        function ap_form_message()
        {
-        $msg = $_SESSION['ap_form_success_msg'];
-        unset($_SESSION['ap_form_success_msg']);
-        return $msg; 
+        if(isset($_SESSION['ap_form_success_msg']))
+        {
+         $msg = $_SESSION['ap_form_success_msg'];
+         unset($_SESSION['ap_form_success_msg']);
+         return $msg;    
+        }
+         
        }
        
        //returns only logged in user related media items
