@@ -42,9 +42,10 @@ If you're looking for Free WordPress guest post plugin, User Post Plugin, Anonym
 * Email support
 * Premium upgrades available
 
-<iframe width="420" height="315" src="//www.youtube.com/embed/TjZNcVG3fDE" frameborder="0" allowfullscreen></iframe>
+[youtube https://www.youtube.com/watch?v=TjZNcVG3fDE]
 
-##  Some Useful Links ##
+
+= Some Useful Links =
 * <strong>Support Email</strong>: support@accesspressthemes.com
 * <strong>Support Forum Link</strong>: http://accesspressthemes.com/support/
 * <strong>Website Link</strong>: http://accesspressthemes.com/
