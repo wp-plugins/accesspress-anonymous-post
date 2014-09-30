@@ -29,7 +29,8 @@ if($error_flag==0)
         if($_FILES['ap_form_post_image']['name']!='')//if user has uploaded the files
         {
             $image_name = $_FILES['ap_form_post_image']['name'];
-            $ext = end(explode('.',$image_name));
+            $ext_array = explode('.',$image_name);
+            $ext = end($ext_array);
             if(!($ext=='jpeg' || $ext=='png' || $ext=='jpg' || $ext=='gif' || $ext=='JPEG' || $ext=='PNG' || $ext=='JPG'))//if users upload invalid file type
             {
               $error->image = __('Invalid File Type','anonymous-post');

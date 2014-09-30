@@ -131,13 +131,10 @@ $ap_settings['author_url_label'] = $author_url_label;
 $ap_settings['author_email_label'] = $author_email_label;
 $ap_settings['post_submit_label'] = $post_submit_label;
 $ap_settings['editor_type'] = $editor_type;
-$ap_settings['post_excerpt'] = $post_excerpt;
 $taxonomies_array = explode(',',$taxonomy_reference);
 foreach($taxonomies_array as $tax)
 {
     $label_name = $tax.'_label';
-    $required_label_name = $tax.'_required_message';
-    $ap_settings[$required_label_name] = $$required_label_name;
     $ap_settings[$label_name] = $$label_name;
 }
 $ap_settings['captcha_settings'] = (isset($captcha_settings))?1:0;
