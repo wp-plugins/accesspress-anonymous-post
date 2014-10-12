@@ -17,7 +17,7 @@
 					<a href="http://accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post-premium/" target="_blank">http://accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post-premium/ </a></p>
 					<div class="halfseperator"></div>
 					<p><strong>Feature comparison between free and premium plugin is here:</strong><br />
-						<a href="http://accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post/#comparison" target="_blank">http://accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post/#comparison</a></p>
+						<a href="http://accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post/#comparision" target="_blank">http://accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post/#comparison</a></p>
 						<div class="seperator"></div><div class="dottedline"></div><div class="seperator"></div>
 
 
@@ -53,7 +53,7 @@
 							<iframe style="border: none; overflow: hidden; width: 764px; height: 206px;" src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FAccessPress-Themes%2F1396595907277967&amp;width=842&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=true&amp;appId=1411139805828592" width="240" height="150" frameborder="0" scrolling="no"></iframe></p>
 
 							<ul class="social-icon">
-								<li><a href="https://plus.google.com/106385805875992204629/" target="_blank"><img src="<?php echo AP_IMAGE_DIR;?>/googleplus.png" alt="google+"></a></li>
+								<li><a href="https://plus.google.com/u/0/+Accesspressthemesprofile/about" target="_blank"><img src="<?php echo AP_IMAGE_DIR;?>/googleplus.png" alt="google+"></a></li>
 								<li><a href="http://www.pinterest.com/accesspresswp/" target="_blank"><img src="<?php echo AP_IMAGE_DIR;?>/pinterest.png" alt="pinterest"></a></li>
 								<li><a href="https://www.flickr.com/photos/accesspressthemes/" target="_blank"><img src="<?php echo AP_IMAGE_DIR;?>/flicker.png" alt="flicker"></a></li>
 								<li><a href="https://twitter.com/apthemes" target="_blank"><img src="<?php echo AP_IMAGE_DIR;?>/twitter.png" alt="twitter"></a></li>
