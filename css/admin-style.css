@@ -68,6 +68,10 @@
 #optionsframework {
     background: none repeat scroll 0 0 #fff;
     max-width: 840px;
+    width:70%;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
 }
 .ap-tab-wrapper {
     padding: 15px;
@@ -262,9 +266,12 @@ h3.feature-title{
     list-style: circle;
 }
 .ap-upgrade-block{
-    width:24%;
+    width:30%;
     float:left;
-    margin-left:30px
+    padding-left:30px;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
 }
 .ap-upgrade-block .ap-upgrade-first{display:block}
 .ap-upgrade-btn{margin-left:-4px;}
