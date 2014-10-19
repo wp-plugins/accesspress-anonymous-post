@@ -45,7 +45,7 @@
   </ul>
   
   <div class="metabox-holder">
-    <div id="optionsframework" class="postbox">
+    <div id="optionsframework" class="postbox" style="float: left;">
       <form class="ap-settings-form" method="post" action="<?php echo admin_url().'admin-post.php'?>">
         <input type="hidden" name="action" value="ap_settings_action"/>
         <input type="hidden" name="taxonomy_reference" value="<?php echo $ap_settings['taxonomy_reference']?>"/>
@@ -98,8 +98,23 @@
        ?>
        <div id="optionsframework-submit" class="ap-settings-submit">
          <input type="submit" value="Save all changes" name="ap_settings_submit"/>
+         <?php 
+         $nonce = wp_create_nonce( 'aps-restore-default-nonce' );
+         ?>
+         <a href="<?php echo admin_url().'admin-post.php?action=ap_restore_default&_wpnonce='.$nonce;?>" onclick="return confirm('<?php _e('Are you sure you want to restore default settings?','anonymous-post');?>')"><input type="button" value="Restore Default Settings" class="ap-reset-button"/></a>
        </div>
      </form>   
+   </div><!--optionsframework-->
+   <div class="ap-upgrade-block">
+     <a href="http://codecanyon.net/item/accesspress-anonymous-post-pro/9160446" target="_blank" class="ap-upgrade-first"><img src="<?php echo AP_IMAGE_DIR.'/anonymous-pro-upgrade-1.jpg'?>"/></a>
+     <a href="http://accesspressthemes.com/demo/wordpress-plugins/accesspress-anonymous-post-pro/" target="_blank"><img src="<?php echo AP_IMAGE_DIR.'/demo-btn.jpg'?>"/></a>
+     <a href="http://codecanyon.net/item/accesspress-anonymous-post-pro/9160446" target="_blank" class="ap-upgrade-btn"><img src="<?php echo AP_IMAGE_DIR.'/upgrade-btn.jpg'?>"/></a>
+     <a href="http://accesspressthemes.com/demo/wordpress-plugins/accesspress-anonymous-post-pro/" target="_blank" class="ap-upgrade-first"><img src="<?php echo AP_IMAGE_DIR.'/anonymous-pro-upgrade-2.jpg'?>"/></a>
+     <a href="http://accesspressthemes.com/demo/wordpress-plugins/accesspress-anonymous-post-pro/" target="_blank"><img src="<?php echo AP_IMAGE_DIR.'/demo-btn.jpg'?>"/></a>
+     <a href="http://codecanyon.net/item/accesspress-anonymous-post-pro/9160446" target="_blank"  class="ap-upgrade-btn"><img src="<?php echo AP_IMAGE_DIR.'/upgrade-btn.jpg'?>"/></a>
+     <div class="ap-enquiry-block">
+      <p>If you have any questions regarding pro version, please contact us from <a href="https://accesspressthemes.com/contact/" target="_blank">here</a></p>
+     </div>
    </div>
  </div>
 

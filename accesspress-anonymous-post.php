@@ -4,7 +4,7 @@ defined('ABSPATH') or die("No script kiddies please!");
  * Plugin Name:AccessPress Anonymous Post
  * Plugin URI: http://accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post/
  * Description: A plugin that provides the ability to publish post from frontend with or without login anonymously using a simple html5 form from anywhere of the site with the help of shortcode and handful of backend settings.
- * Version:1.0.4
+ * Version:1.0.5
  * Author:AccessPress Themes
  * Author URI:http://accesspressthemes.com/
  * License:GPLv2 or later
@@ -54,6 +54,7 @@ defined('ABSPATH') or die("No script kiddies please!");
             add_shortcode('ap-form-message',array($this,'ap_form_message'));//add the shortcode to display the post submission message in redirected page.
             add_action('wp_enqueue_scripts',array($this,'register_frontend_assets'));//registers scripts and styles for front end
             add_action('pre_get_posts',array($this,'restrict_media_library'));//restricts user to see only uploaded by logged in user
+            add_action('admin_post_ap_restore_default',array($this,'ap_restore_default'));//restores default settings
 
             
         }
@@ -293,7 +294,7 @@ defined('ABSPATH') or die("No script kiddies please!");
                         'Post title: '.$post_title.'<br/><br/>
                         
                         ____<br/><br/>
-                        '.__('To take action (approve/reject)- please go here:','anonymous-post')
+                        '.__('To take action (approve/reject)- please go here:','anonymous-post').'<br/>'
                         .admin_url().'post.php?post='.$post_id.'&action=edit <br/><br/>
                         
                         '.__('Thank You','anonymous-post');
@@ -342,6 +343,59 @@ defined('ABSPATH') or die("No script kiddies please!");
             $wp_query_obj->set('author', $current_user->ID );
             return;
             }
+            
+      //restores default settings explicitly
+      function ap_restore_default()
+      {
+        $nonce = $_REQUEST['_wpnonce'];
+        if(!empty($_GET) && wp_verify_nonce( $nonce, 'aps-restore-default-nonce' ))
+        {
+            $ap_settings = array();//array for saving all the plugin's settings in single array
+            $ap_settings['form_title'] = 'Anonymous Post';
+            $ap_settings['publish_status'] = 'draft';
+            $ap_settings['admin_notification'] = 1;
+            $ap_settings['login_check'] = 0;
+            $ap_settings['login_message'] = 'Please login to submit the post.';
+            $ap_settings['login_link_text'] = '';
+            $ap_settings['post_author'] = $this->get_first_user_id();
+            $ap_settings['plugin_styles'] = 1;
+            $ap_settings['post_submission_message'] = '';
+            $ap_settings['form_included_fields'] = array('post_title','post_content');
+            $ap_settings['taxonomy_reference'] = 'category,post_tag';
+            $ap_settings['editor_type'] = 'rich';
+            $ap_settings['media_upload'] = 0;
+            $ap_settings['form_included_taxonomy'] = array();
+            $ap_settings['post_category'] = '';
+            $ap_settings['post_title_label'] = '';
+            $ap_settings['post_excerpt_label'] = '';
+            $ap_settings['post_content_label'] = '';
+            $ap_settings['post_image_label'] = '';
+            $ap_settings['author_name_label'] = '';
+            $ap_settings['author_url_label'] = '';
+            $ap_settings['author_email_label'] = '';
+            $ap_settings['post_submit_label'] = '';
+            $ap_settings['category_label'] = '';
+            $ap_settings['post_tag_label'] = '';
+            $ap_settings['captcha_settings'] = '1';
+            $ap_settings['math_captcha_label'] = '';
+            $ap_settings['editor_type'] = 'rich';
+            $ap_settings['redirect_url'] = '';
+            $ap_settings['admin_email_list'] = array();
+            $ap_settings['math_captcha_error_message'] = '';
+            $restore = update_option('ap_settings',$ap_settings);//update as default option while activating for the first time.
+            if($restore)
+            {
+                $_SESSION['ap_message'] = 'Default Settings Restored Successfully.';
+                wp_redirect(admin_url().'admin.php?page=anonymous-post');
+                exit;
+            }    
+            
+        }
+        else
+        {
+            die('No script kiddies please!');
+        }
+      }
        
     }//class termination
     
