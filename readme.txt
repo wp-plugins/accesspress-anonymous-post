@@ -4,7 +4,7 @@ Tags: Guest Post,User Post,Anonymous post,Front end post,Guest Author,Frontend f
 Donate link: http://accesspressthemes.com/donation/
 Requires at least: 3.8
 Tested up to: 4.0
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -99,6 +99,9 @@ Once you install the plugin , you can check some general documentation about how
 4. Frontend Form 
 
 == Changelog ==
+= 1.0.6 =
+* Done some minor changes regarding restoring default settings
+
 = 1.0.5 =
 * Fixed small bug for admin email
 * Updated the how to use section for better documentation
