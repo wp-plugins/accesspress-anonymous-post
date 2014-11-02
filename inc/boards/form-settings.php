@@ -13,8 +13,11 @@
             <div class="ap-included-single-wrap">
               <input type="checkbox" name="form_included_fields[]" value="post_title" checked="checked" onclick="return false;"/><span><?php _e('Show on form','anonymous-post');?></span>
             </div>
+            <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_required_fields[]" value="post_title" checked="checked" onclick="return false;"/><span><?php _e('Required','anonymous-post');?></span>
+            </div>
           </div><!--ap-fields-configurations-->
-        </div><!--ap-each-config-wrapper-->
+         </div><!--ap-each-config-wrapper-->
         <!--Post Title Ends--> 
 
         <!--Post content-->
@@ -25,6 +28,9 @@
           <div class="ap-fields-configurations">
             <div class="ap-included-single-wrap">
               <input type="checkbox" name="form_included_fields[]" value="post_content" checked="checked" onclick="return false;"/><span><?php _e('Show on form','anonymous-post');?></span>
+            </div>
+            <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_required_fields[]" value="post_content" checked="checked" onclick="return false;"/><span><?php _e('Required','anonymous-post');?></span>
             </div>
           </div><!--ap-fields-configurations-->
         </div><!--ap-each-config-warpper-->
@@ -37,7 +43,10 @@
           </div><!--ap-fioelds-label-->
           <div class="ap-fields-configurations">
             <div class="ap-included-single-wrap">
-              <input type="checkbox" name="form_included_fields[]" value="post_excerpt" <?php if(in_array('post_excerpt',$ap_settings['form_included_fields'])){?>checked="checked"<?php }?>/><span><?php _e('Show on form','anonymous-post');?></span>
+              <input type="checkbox" name="form_included_fields[]" value="post_excerpt" <?php if(in_array('post_excerpt',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Show on form','anonymous-post');?></span>
+            </div>
+            <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_required_fields[]" value="post_excerpt" <?php if(in_array('post_excerpt',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post');?></span>
             </div>
 
           </div><!--ap-fields-configurations-->
@@ -53,6 +62,9 @@
             <div class="ap-included-single-wrap">
               <input type="checkbox" name="form_included_fields[]" value="post_image" <?php if(in_array('post_image',$ap_settings['form_included_fields'])){?>checked="checked"<?php }?>/><span><?php _e('Show in form','anonymous-post')?></span>
             </div>
+            <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_required_fields[]" value="post_image" <?php if(in_array('post_image',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post')?></span>
+            </div>
           </div><!--ap-fields-configurations-->
         </div><!--ap-each-config-wrapper-->
         <!--Post Image Ends-->
@@ -65,6 +77,9 @@
           <div class="ap-fields-configurations">
             <div class="ap-included-single-wrap">
               <input type="checkbox" name="form_included_fields[]" value="author_name" <?php if(in_array('author_name',$ap_settings['form_included_fields'])){?>checked="checked"<?php }?>/><span><?php _e('Show on form','anonymous-post');?></span>
+            </div>
+             <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_required_fields[]" value="author_name" <?php if(in_array('author_name',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post');?></span>
             </div>
           </div><!--ap-fields-configurations-->
         </div><!--ap-each-config-wrapper-->
@@ -79,6 +94,9 @@
             <div class="ap-included-single-wrap">
               <input type="checkbox" name="form_included_fields[]" value="author_url" <?php if(in_array('author_url',$ap_settings['form_included_fields'])){?>checked="checked"<?php }?>/><span><?php _e('Show on form','anonymous-post');?></span>
             </div>
+             <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_required_fields[]" value="author_url" <?php if(in_array('author_url',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post');?></span>
+            </div>
           </div><!--ap-fields-configurations-->
         </div><!--ap-each-config-wrapper-->
         <!--Author URL ends-->
@@ -91,6 +109,9 @@
           <div class="ap-fields-configurations">
             <div class="ap-included-single-wrap">
               <input type="checkbox" name="form_included_fields[]" value="author_email" <?php if(in_array('author_email',$ap_settings['form_included_fields'])){?>checked="checked"<?php }?>/><span><?php _e('Show on form','anonymous-post');?></span>
+            </div>
+             <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_required_fields[]" value="author_email" <?php if(in_array('author_email',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post');?></span>
             </div>
           </div><!--ap-fields-configurations-->
         </div><!--ap-each-config-wrapper-->
@@ -106,6 +127,9 @@
             <div class="ap-included-single-wrap">
               <input type="checkbox" name="form_included_taxonomy[]" value="category"  <?php if(in_array('category', $ap_settings['form_included_taxonomy'])){?>checked="checked"<?php }?> /><span><?php _e('Show on form','anonymous-post');?></span>
             </div>
+             <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_required_fields[]" value="category" <?php if(in_array('category',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post');?></span>
+            </div>
           </div><!--ap-fields-configurations-->
         </div><!--ap-each-config-wrapper-->
 
@@ -116,6 +140,9 @@
           <div class="ap-fields-configurations">
             <div class="ap-included-single-wrap">
               <input type="checkbox" name="form_included_taxonomy[]" value="post_tag"  <?php if(in_array('post_tag', $ap_settings['form_included_taxonomy'])){?>checked="checked"<?php }?> /><span><?php _e('Show on form','anonymous-post');?></span>
+            </div>
+             <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_required_fields[]" value="post_tag" <?php if(in_array('post_tag',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post');?></span>
             </div>
           </div><!--ap-fields-configurations-->
         </div><!--ap-each-config-wrapper-->

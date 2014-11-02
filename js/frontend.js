@@ -87,7 +87,20 @@ function check_form_submittable()
                 
                   
                }
-               
+              $('.ap-form-wrapper select').each(function(){
+                
+              if($(this).hasClass('ap-required-field') && $(this).val()=='1')
+                {
+                    error_flag = 1;
+                    var error_message = $(this).attr('data-required-message');
+                    if(error_message=='')
+                    {
+                        error_message = ap_form_required_message;
+                    }
+                    $(this).closest('.ap-form-field-wrapper').find('.ap-form-error-message').html(error_message);
+                    
+                }
+              });
                 if(error_flag==0)
                 {
                     return true;
@@ -104,6 +117,11 @@ function check_form_submittable()
             $('.ap-form-wrapper input').keyup(function(){
                $(this).closest('.ap-form-field-wrapper').find('.ap-form-error-message').html(''); 
             });
-            
+            $('.ap-form-wrapper select').change(function(){
+                $(this).closest('.ap-form-field-wrapper').find('.ap-form-error-message').html('');
+            });
+            $('.ap-form-wrapper input[type="file"]').change(function(){
+                $(this).closest('.ap-form-field-wrapper').find('.ap-form-error-message').html('');
+            });
             });
 }(jQuery));

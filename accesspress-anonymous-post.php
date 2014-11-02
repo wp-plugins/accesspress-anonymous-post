@@ -4,7 +4,7 @@ defined('ABSPATH') or die("No script kiddies please!");
  * Plugin Name:AccessPress Anonymous Post
  * Plugin URI: http://accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post/
  * Description: A plugin that provides the ability to publish post from frontend with or without login anonymously using a simple html5 form from anywhere of the site with the help of shortcode and handful of backend settings.
- * Version:1.0.6
+ * Version:2.0.0
  * Author:AccessPress Themes
  * Author URI:http://accesspressthemes.com/
  * License:GPLv2 or later
@@ -142,6 +142,7 @@ defined('ABSPATH') or die("No script kiddies please!");
             $ap_settings['plugin_styles'] = 1;
             $ap_settings['post_submission_message'] = '';
             $ap_settings['form_included_fields'] = array('post_title','post_content');
+            $ap_settings['form_required_fields'] = array('post_title','post_content');
             $ap_settings['taxonomy_reference'] = 'category,post_tag';
             $ap_settings['editor_type'] = 'rich';
             $ap_settings['media_upload'] = 0;
@@ -225,14 +226,14 @@ defined('ABSPATH') or die("No script kiddies please!");
        function ap_form()
        {
         $ap_settings = $this->ap_settings;
-        include_once('inc/cores/shortcode.php');
+        include('inc/cores/shortcode.php');
         return $ap_form;
        }
        
        //Prepares the form html for the shortcode
        function prepare_form_html()
        {
-        include_once('inc/cores/front-form.php');
+        include('inc/cores/front-form.php');
         return $form;
        }
        
@@ -361,6 +362,7 @@ defined('ABSPATH') or die("No script kiddies please!");
             $ap_settings['plugin_styles'] = 1;
             $ap_settings['post_submission_message'] = '';
             $ap_settings['form_included_fields'] = array('post_title','post_content');
+            $ap_settings['form_required_fields'] = array('post_title','post_content');
             $ap_settings['taxonomy_reference'] = 'category,post_tag';
             $ap_settings['editor_type'] = 'rich';
             $ap_settings['media_upload'] = 0;

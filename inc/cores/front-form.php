@@ -7,6 +7,8 @@ $post_title_label = ($ap_settings['post_title_label']=='')?__('Post Title','anon
 $post_content_label = ($ap_settings['post_content_label']=='')?__('Post Content','anonymous-post'):esc_attr($ap_settings['post_content_label']);
 $post_image_label = ($ap_settings['post_image_label'])==''?__('Post Image','anonymous-post'):esc_attr($ap_settings['post_image_label']);
 $post_submit_label = ($ap_settings['post_submit_label']=='')?__('Submit Post','anonymous-post'):esc_attr($ap_settings['post_submit_label']);
+$form_required_fields = isset($ap_settings['form_required_fields'])?$ap_settings['form_required_fields']:array();
+$required_message = __('This field is required','anonymous-post');
 //$this->print_array($ap_settings);
 //$this->print_array($_SESSION);
 global $error;
@@ -16,7 +18,7 @@ global $error;
  * */
  if($ap_settings['editor_type']=='simple')
  {
-   $wp_editor = '<textarea name="ap_form_content_editor" rows="5"></textarea>';
+   $wp_editor = '<textarea name="ap_form_content_editor" rows="5" data-required-message = "'.$required_message.'"></textarea>';
        
  }
  else
@@ -56,10 +58,11 @@ $form .= '</div><!--ap-form-field-wrapper-->';
 if(in_array('post_excerpt',$ap_settings['form_included_fields']))
 {
     $post_excerpt_label = ($ap_settings['post_excerpt_label']=='')?__('Post Excerpt','anonymous-post'):esc_attr($ap_settings['post_excerpt_label']);
+    $required = in_array('post_excerpt',$form_required_fields)?'class="ap-required-field"':'';
     $form .='<div class="ap-form-field-wrapper">
                 <label>'.$post_excerpt_label.'</label>
                 <div class="ap-form-field">
-                  <textarea name="ap_form_post_excerpt"></textarea>
+                  <textarea name="ap_form_post_excerpt" '.$required.' data-required-message="'.$required_message.'"></textarea>
                 </div><!--ap-form-field-->';
         $form .='</div><!--ap-form-field-wrapper-->';
 } 
@@ -68,10 +71,11 @@ if(in_array('post_excerpt',$ap_settings['form_included_fields']))
 if(in_array('post_image',$ap_settings['form_included_fields']))
 {
     $error_image = isset($error->image)?$error->image:'';
+    $required = in_array('post_image',$form_required_fields)?'class="ap-required-field"':'';
     $form .='<div class="ap-form-field-wrapper">
                 <label>'.$post_image_label.'</label>
                 <div class="ap-form-field">
-                  <input type="file" name="ap_form_post_image"/>
+                  <input type="file" name="ap_form_post_image" '.$required.' data-required-message="'.$required_message.'"/>
                 </div><!--ap-form-field-->';
         $form .= '<div class="ap-form-error-message">'.$error_image.'</div>';
     $form .='</div><!--ap-form-field-wrapper-->';
@@ -86,10 +90,11 @@ if(!empty($ap_settings['form_included_taxonomy']))
         if($taxonomy!='post_tag'){
             $taxonomy_label = $taxonomy.'_label';
           $taxonomy_form_label = ($ap_settings[$taxonomy_label]!='')?esc_attr($ap_settings[$taxonomy_label]):ucfirst($taxonomy);
+          $required = in_array('category',$form_required_fields)?'class="ap-required-field"':'';
         $form .='<div class="ap-form-field-wrapper">
                    <label>'.$taxonomy_form_label.'</label>
                 <div class="ap-form_field">
-                  <select name="'.$taxonomy.'_taxonomy">';
+                  <select name="'.$taxonomy.'_taxonomy" '.$required.' data-required-message="'.$required_message.'">';
         $terms = get_terms($taxonomy,array('hide_empty'=>0,'order'=>'ASC','orderby'=>'id'));
         foreach($terms as $term)
         {
@@ -103,10 +108,11 @@ if(!empty($ap_settings['form_included_taxonomy']))
         else
         {
             $tag_label = ($ap_settings['post_tag_label']=='')?__('Tags (Use comma to add multiple tags)','anonymous-post'):esc_attr($ap_settings['post_tag_label']);
+            $required = in_array('post_tag',$form_required_fields)?'class="ap-required-field"':'';
             $form .='<div class="ap-form-field-wrapper">
                         <label>'.$tag_label.'</label>
                         <div class="ap-form-field">
-                          <input type="text" name="post_tag_taxonomy"/>
+                          <input type="text" name="post_tag_taxonomy" '.$required.' data-required-message="'.$required_message.'"/>
                         </div><!--ap-form-field-->
                         <div class="ap-form-error-message"></div>
                     </div><!--ap-form-field-wrapper-->';
@@ -119,10 +125,11 @@ if(!empty($ap_settings['form_included_taxonomy']))
 if(in_array('author_name',$ap_settings['form_included_fields']))
 {
     $author_name_label = ($ap_settings['author_name_label']=='')?__('Author Name','anonymous-post'):esc_attr($ap_settings['author_name_label']);
+    $required = in_array('author_name',$form_required_fields)?'class="ap-required-field"':'';
     $form .='<div class="ap-form-field-wrapper">
                 <label>'.$author_name_label.'</label>
                 <div class="ap-form-field">
-                   <input type="text" name="ap_author_name"/> 
+                   <input type="text" name="ap_author_name" '.$required.' data-required-message="'.$required_message.'"/> 
                 </div><!--ap-form-field-->
                 <div class="ap-form-error-message"></div>
              </div><!--ap-form-field-wrapper-->';
@@ -130,10 +137,11 @@ if(in_array('author_name',$ap_settings['form_included_fields']))
 if(in_array('author_url',$ap_settings['form_included_fields']))
 {
     $author_url_label = ($ap_settings['author_url_label']=='')?__('Author URL','anonymous-post'):esc_attr($ap_settings['author_url_label']);
+    $required = in_array('author_url',$form_required_fields)?'class="ap-required-field"':'';
     $form .='<div class="ap-form-field-wrapper">
                 <label>'.$author_url_label.'</label>
                 <div class="ap-form-field">
-                   <input type="text" name="ap_author_url"/> 
+                   <input type="text" name="ap_author_url" '.$required.' data-required-message="'.$required_message.'"/> 
                 </div><!--ap-form-field-->
                 <div class="ap-form-error-message"></div>
              </div><!--ap-form-field-wrapper-->';
@@ -141,10 +149,11 @@ if(in_array('author_url',$ap_settings['form_included_fields']))
 if(in_array('author_email',$ap_settings['form_included_fields']))
 {
     $author_email_label = ($ap_settings['author_email_label']=='')?__('Author Email','anonymous-post'):esc_attr($ap_settings['author_email_label']);
+    $required = in_array('author_email',$form_required_fields)?'class="ap-required-field"':'';
     $form .='<div class="ap-form-field-wrapper">
                 <label>'.$author_email_label.'</label>
                 <div class="ap-form-field">
-                   <input type="email" name="ap_author_email"/> 
+                   <input type="email" name="ap_author_email" '.$required.' data-required-message="'.$required_message.'"/> 
                 </div><!--ap-form-field-->
                 <div class="ap-form-error-message"></div>
              </div><!--ap-form-field-wrapper-->';

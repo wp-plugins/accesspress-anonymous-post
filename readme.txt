@@ -4,7 +4,7 @@ Tags: Guest Post,User Post,Anonymous post,Front end post,Guest Author,Frontend f
 Donate link: http://accesspressthemes.com/donation/
 Requires at least: 3.8
 Tested up to: 4.0
-Stable tag: 1.0.6
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,7 @@ If you're looking for Free WordPress guest post plugin, User Post Plugin, Anonym
 * Email notification to admin email after successful post submission.
 * Customized Post Submission message.
 * Field Selection ability.
+* Required Fields Selection Ability
 * Anyone can post from anywhere in the site
 * Category selection
 * Add featured image to the post. More than one image and other media items can be added to the post if logged in.
@@ -99,8 +100,11 @@ Once you install the plugin , you can check some general documentation about how
 4. Frontend Form 
 
 == Changelog ==
+= 2.0.0 =
+* Added Required Fields selection feature
+
 = 1.0.6 =
-* Done some minor changes regarding restoring default settings
+* Done some minor changes regarding restoring default settings 
 
 = 1.0.5 =
 * Fixed small bug for admin email

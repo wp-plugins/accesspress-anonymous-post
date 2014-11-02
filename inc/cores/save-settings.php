@@ -118,6 +118,7 @@ $ap_settings['post_author'] = $post_author;
 $ap_settings['post_submission_message'] = $post_submission_message;
 $ap_settings['form_title'] = $form_title;
 $ap_settings['form_included_fields'] = (isset($form_included_fields) && !empty($form_included_fields))?$form_included_fields:array('post_title','post_content');
+$ap_settings['form_required_fields'] = (isset($form_required_fields) && !empty($form_required_fields))?$form_required_fields:array('post_title','post_content');
 $ap_settings['taxonomy_reference'] = $taxonomy_reference;
 $ap_settings['form_included_taxonomy'] = isset($form_included_taxonomy)?$form_included_taxonomy:array();
 $ap_settings['media_upload'] = isset($media_upload)?1:0;
