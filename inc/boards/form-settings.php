@@ -1,0 +1,293 @@
+<div class="ap-tabs-board" id="board-form-settings" style="display: none;">
+  <div class="ap-form-config">
+    <h2><?php _e('Form field configurations','anonymous-post');?></h2>
+    <div class="ap-tab-wrapper">
+      <div class="ap-option-wrapper">
+        <div class="ap-form-configuration-wrapper">
+         <!--Post Title-->
+         <div class="ap-each-config-wrapper">
+          <div class="ap-fields-label">
+            <label><?php _e('Post Title','anonymous-post');?></label>
+          </div><!--ap-fioelds-label-->
+          <div class="ap-fields-configurations">
+            <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_included_fields[]" value="post_title" checked="checked" onclick="return false;"/><span><?php _e('Show on form','anonymous-post');?></span>
+            </div>
+            <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_required_fields[]" value="post_title" checked="checked" onclick="return false;"/><span><?php _e('Required','anonymous-post');?></span>
+            </div>
+          </div><!--ap-fields-configurations-->
+         </div><!--ap-each-config-wrapper-->
+        <!--Post Title Ends--> 
+
+        <!--Post content-->
+        <div class="ap-each-config-wrapper">
+          <div class="ap-fields-label">
+            <label><?php _e('Post Content','anonymous-post');?></label>
+          </div><!--ap-fioelds-label-->
+          <div class="ap-fields-configurations">
+            <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_included_fields[]" value="post_content" checked="checked" onclick="return false;"/><span><?php _e('Show on form','anonymous-post');?></span>
+            </div>
+            <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_required_fields[]" value="post_content" checked="checked" onclick="return false;"/><span><?php _e('Required','anonymous-post');?></span>
+            </div>
+          </div><!--ap-fields-configurations-->
+        </div><!--ap-each-config-warpper-->
+        <!--Post content ends-->
+
+        <!--Post Excerpt-->
+        <div class="ap-each-config-wrapper">
+          <div class="ap-fields-label">
+            <label><?php _e('Post Excerpt','anonymous-post');?></label>
+          </div><!--ap-fioelds-label-->
+          <div class="ap-fields-configurations">
+            <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_included_fields[]" value="post_excerpt" <?php if(in_array('post_excerpt',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Show on form','anonymous-post');?></span>
+            </div>
+            <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_required_fields[]" value="post_excerpt" <?php if(in_array('post_excerpt',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post');?></span>
+            </div>
+
+          </div><!--ap-fields-configurations-->
+        </div><!--ap-each-config-wrapper-->
+        <!--Post Excerpt Ends-->
+
+        <!--Post Image-->
+        <div class="ap-each-config-wrapper">
+          <div class="ap-fields-label">
+            <label><?php _e('Post Image','anonymous-post');?></label>
+          </div><!--ap-fioelds-label-->
+          <div class="ap-fields-configurations">
+            <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_included_fields[]" value="post_image" <?php if(in_array('post_image',$ap_settings['form_included_fields'])){?>checked="checked"<?php }?>/><span><?php _e('Show in form','anonymous-post')?></span>
+            </div>
+            <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_required_fields[]" value="post_image" <?php if(in_array('post_image',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post')?></span>
+            </div>
+          </div><!--ap-fields-configurations-->
+        </div><!--ap-each-config-wrapper-->
+        <!--Post Image Ends-->
+
+        <!--Author Name-->
+        <div class="ap-each-config-wrapper">
+          <div class="ap-fields-label">
+            <label><?php _e('Author Name','anonymous-post');?></label>
+          </div><!--ap-fioelds-label-->
+          <div class="ap-fields-configurations">
+            <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_included_fields[]" value="author_name" <?php if(in_array('author_name',$ap_settings['form_included_fields'])){?>checked="checked"<?php }?>/><span><?php _e('Show on form','anonymous-post');?></span>
+            </div>
+             <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_required_fields[]" value="author_name" <?php if(in_array('author_name',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post');?></span>
+            </div>
+          </div><!--ap-fields-configurations-->
+        </div><!--ap-each-config-wrapper-->
+        <!--Author Name ends-->
+
+        <!--Author URL-->
+        <div class="ap-each-config-wrapper">
+          <div class="ap-fields-label">
+            <label><?php _e('Author URL','anonymous-post');?></label>
+          </div><!--ap-fields-label-->
+          <div class="ap-fields-configurations">
+            <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_included_fields[]" value="author_url" <?php if(in_array('author_url',$ap_settings['form_included_fields'])){?>checked="checked"<?php }?>/><span><?php _e('Show on form','anonymous-post');?></span>
+            </div>
+             <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_required_fields[]" value="author_url" <?php if(in_array('author_url',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post');?></span>
+            </div>
+          </div><!--ap-fields-configurations-->
+        </div><!--ap-each-config-wrapper-->
+        <!--Author URL ends-->
+
+        <!--Author Email-->
+        <div class="ap-each-config-wrapper">
+          <div class="ap-fields-label">
+            <label><?php _e('Author Email','anonymous-post');?></label>
+          </div><!--ap-fields-label-->
+          <div class="ap-fields-configurations">
+            <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_included_fields[]" value="author_email" <?php if(in_array('author_email',$ap_settings['form_included_fields'])){?>checked="checked"<?php }?>/><span><?php _e('Show on form','anonymous-post');?></span>
+            </div>
+             <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_required_fields[]" value="author_email" <?php if(in_array('author_email',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post');?></span>
+            </div>
+          </div><!--ap-fields-configurations-->
+        </div><!--ap-each-config-wrapper-->
+        <!--Author Email ends-->
+
+        <!--Taxanomies-->
+
+        <div class="ap-each-config-wrapper">
+          <div class="ap-fields-label">
+            <label><?php _e('Post Category','anonymous-post');?></label>
+          </div><!--ap-fioelds-label-->
+          <div class="ap-fields-configurations">
+            <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_included_taxonomy[]" value="category"  <?php if(in_array('category', $ap_settings['form_included_taxonomy'])){?>checked="checked"<?php }?> /><span><?php _e('Show on form','anonymous-post');?></span>
+            </div>
+             <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_required_fields[]" value="category" <?php if(in_array('category',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post');?></span>
+            </div>
+          </div><!--ap-fields-configurations-->
+        </div><!--ap-each-config-wrapper-->
+
+        <div class="ap-each-config-wrapper">
+          <div class="ap-fields-label">
+            <label><?php _e('Post Tags','anonymous-post');?></label>
+          </div><!--ap-fioelds-label-->
+          <div class="ap-fields-configurations">
+            <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_included_taxonomy[]" value="post_tag"  <?php if(in_array('post_tag', $ap_settings['form_included_taxonomy'])){?>checked="checked"<?php }?> /><span><?php _e('Show on form','anonymous-post');?></span>
+            </div>
+             <div class="ap-included-single-wrap">
+              <input type="checkbox" name="form_required_fields[]" value="post_tag" <?php if(in_array('post_tag',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post');?></span>
+            </div>
+          </div><!--ap-fields-configurations-->
+        </div><!--ap-each-config-wrapper-->
+
+        <!--Taxanomies ends-->
+
+        <div class="ap-option-note ap-options-width"><?php _e('Post Title and Post Content are mandatory.','anonymous-post');?></div>
+      </div><!--ap-form-configuration-wrapper-->
+    </div><!--ap-option-wrapper-->
+  </div>
+  <div class="line"></div>
+  <div class="seperator"></div>
+  <div class="ap-tab-wrapper">
+    <div class="ap-option-wrapper">
+      <label><?php _e('Post Categories','anonymous-post');?></label>
+      <div class="ap-option-field">
+        <select name="post_category">
+          <?php 
+        /**
+         * Get all the terms of the post category
+         * */
+        $categories = get_terms('category',array('hide_empty'=>0,'order'=>'ASC','orderby'=>'id'));
+        if(!empty($categories))
+        {
+          foreach($categories as $category)
+          {
+            ?>
+            <option value="<?php echo $category->term_id;?>" <?php if($ap_settings['post_category']==$category->term_id){?>selected="selected"<?php }?>><?php echo $category->name;?></option>
+            <?php 
+          }
+        }
+        ?>
+      </select>
+      <div class="ap-option-note ap-option-width"><?php _e('Choose any  only if you don\'t include to show the category selecting options in the form','anonymous-post');?></div>
+    </div>
+  </div>
+  <div class="ap-option-wrapper">
+    <label><?php _e('Post Content Editor Type:','anonymous-post');?></label>
+    <div class="ap-option-field">
+      <select name="editor_type">
+        <option value="simple" <?php if($ap_settings['editor_type']=='simple'){?>selected="selected"<?php }?>>Simple Text Box</option>
+        <option value="rich" <?php if($ap_settings['editor_type']=='rich'){?>selected="selected"<?php }?>>Rich Text Editor</option>
+        <option value="visual" <?php if($ap_settings['editor_type']=='visual'){?>selected="selected"<?php }?>>Visual Editor</option>
+        <option value="html" <?php if($ap_settings['editor_type']=='html'){?>selected="selected"<?php }?>>HTML Editor</option>
+      </select>
+    </div>
+  </div>
+</div>
+</div><!--Form Configurations-->
+<div class="line"></div>
+<!--Form Labels-->
+<div class="ap-form-labels">
+  <h2><?php _e('Form Labels','anonymous-post');?></h2>
+  <div class="ap-tab-wrapper">
+          <!--Post Title--->
+          <div class="ap-option-wrapper">
+            <label><?php _e('Post Title','anonymous-post')?></label>
+            <div class="ap-option-field">
+                <input type="text" name="post_title_label" value="<?php echo esc_attr($ap_settings['post_title_label']);?>"/>
+            </div>
+          </div>
+          <!--Post Title Ends-->
+          
+          <!--Post content-->
+          <div class="ap-option-wrapper">
+            <label><?php _e('Post Content','anonymous-post')?></label>
+            <div class="ap-option-field">
+              <input type="text" name="post_content_label" value="<?php echo  esc_attr($ap_settings['post_content_label']);?>"/>
+            </div>
+          </div>
+          <!--Post content ends-->
+          
+          <!--Post Excerpt -->
+          <div class="ap-option-wrapper">
+            <label><?php _e('Post Excerpt','anonymous-post')?></label>
+            <div class="ap-option-field">
+              <input type="text" name="post_excerpt_label" value="<?php echo  esc_attr($ap_settings['post_excerpt_label']);?>"/>
+            </div>
+          </div>
+          <!--Post Excerpt ends-->
+          
+          <!--Post Image -->
+          <div class="ap-option-wrapper">
+            <label><?php _e('Post Image','anonymous-post')?></label>
+            <div class="ap-option-field">
+              <input type="text" name="post_image_label" value="<?php echo  esc_attr($ap_settings['post_image_label']);?>"/>
+            </div>
+          </div>
+          <!--Post Image ends-->
+          
+          <!--Post Taxonomy-->
+          <div class="ap-option-wrapper">
+            <label><?php _e('Post Category','anonymous-post');?></label>
+            <div class="ap-option-field">
+              <input type="text" name="category_label" value="<?php echo  esc_attr($ap_settings['category_label'])?>"/>
+            </div>
+          </div>
+          
+          <div class="ap-option-wrapper">
+            <label><?php _e('Post Tags','anonymous-post');?></label>
+            <div class="ap-option-field">
+              <input type="text" name="post_tag_label" value="<?php echo  esc_attr($ap_settings['post_tag_label'])?>"/>
+            </div>
+          </div>
+          <!--Post Taxonomy ends-->
+
+          <!--Author Name-->
+          <div class="ap-option-wrapper">
+            <label><?php _e('Author Name','anonymous-post');?></label>
+            <div class="ap-option-field">
+              <input type="text" name="author_name_label" value="<?php echo  esc_attr($ap_settings['author_name_label']);?>"/>
+            </div>
+          </div>
+          <!--Author Name ends-->
+          
+          <!--Author URL-->
+          <div class="ap-option-wrapper">
+            <label><?php _e('Author URL','anonymous-post');?></label>
+            <div class="ap-option-field">
+              <input type="text" name="author_url_label" value="<?php echo  esc_attr($ap_settings['author_url_label']);?>"/>
+            </div>
+          </div>
+          <!--Author URL ends-->
+          
+          <!--Author Email-->
+          <div class="ap-option-wrapper">
+            <label><?php _e('Author Email','anonymous-post');?></label>
+            <div class="ap-option-field">
+              <input type="text" name="author_email_label" value="<?php echo  esc_attr($ap_settings['author_email_label']);?>"/>
+            </div>
+          </div>
+          <!--Author Email Ends-->
+          
+          <!--Submit Button-->
+          <div class="ap-option-wrapper">
+            <label><?php _e('Submit Button','anonymous-post');?></label>
+            <div class="ap-option-field">
+              <input type="text" name="post_submit_label" value="<?php echo esc_attr($ap_settings['post_submit_label']);?>"/>
+            </div>
+          </div>
+          <!--Submit Button-->
+
+          <div class="ap-option-note ap-option-width"><?php _e('These field will only show up in frontend if you have checked these fields in Form Field Configurations secton above.','anonymous-post');?></div>    
+        </div>
+      </div><!--ap-form-label-->
+      <!--Form Labels-->
+
+    </div>
