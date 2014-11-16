@@ -50,8 +50,7 @@
 )
  * */
  
-//$this->print_array($_POST);
-//die();
+
 
 /**
  * Changes all the posted fields into its respective variables from $_POST
@@ -87,9 +86,9 @@
                 {
                     $val = sanitize_text_field($val);
                 }
-                //$val = $this->filter_field($val);//sanitizes the text fields
+                
             }
-            //$$key = (!is_array($val))?$this->filter_field($val):$val;
+            
             $$key = $val;
         }
  
@@ -147,6 +146,6 @@ $update_option_check = update_option('ap_settings',$ap_settings);
 $_SESSION['ap_message'] = 'Settings Saved Successfully.'; 
 wp_redirect(admin_url().'admin.php?page=anonymous-post');
 exit;
-//$this->print_array($ap_settings);
+
 
 

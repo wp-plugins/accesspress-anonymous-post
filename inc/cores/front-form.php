@@ -9,10 +9,9 @@ $post_image_label = ($ap_settings['post_image_label'])==''?__('Post Image','anon
 $post_submit_label = ($ap_settings['post_submit_label']=='')?__('Submit Post','anonymous-post'):esc_attr($ap_settings['post_submit_label']);
 $form_required_fields = isset($ap_settings['form_required_fields'])?$ap_settings['form_required_fields']:array();
 $required_message = __('This field is required','anonymous-post');
-//$this->print_array($ap_settings);
-//$this->print_array($_SESSION);
+
 global $error;
-//$this->print_array($ap_settings['form_included_fields']);
+
 /**
  * For grabbing the html of the wp editor and saving into variable 
  * */
@@ -159,7 +158,6 @@ if(in_array('author_email',$ap_settings['form_included_fields']))
              </div><!--ap-form-field-wrapper-->';
 }
 
-//If google captcha is enabled
 
 if($ap_settings['captcha_settings']==1)
 {

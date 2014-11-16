@@ -5,7 +5,7 @@
   global $ap_settings;
   $ap_settings = $this->ap_settings;
   $form_required_fields = isset($ap_settings['form_required_fields'])?$ap_settings['form_required_fields']:array('post_title','post_content');
-   //$this->print_array($ap_settings);
+   
 
   ?>
   <div class="ap-settings-wrapper wrap">

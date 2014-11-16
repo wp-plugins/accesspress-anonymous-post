@@ -6,7 +6,7 @@ $ap_form_post_title = sanitize_text_field($_POST['ap_form_post_title']);
 $ap_form_content = $_POST['ap_form_content_editor'];
 $error = new stdClass();
 $error_flag = 0;
-//condition check if google captcha is enabled 
+
 //if captcha is disabled or captcha has been entered correctly
 if($error_flag==0)
 {
@@ -127,15 +127,7 @@ if($error_flag==0)
                 wp_set_post_categories( $post_id, array($post_category));
             }
         }
-        //else
-//        {
-//            //if none of the taxonomies are included on the form and still admin wants to assign to specific taxonomy
-//            if($ap_settings['post_category']!='')
-//            {
-//                $post_category = esc_attr($ap_settings['post_category']);
-//                wp_set_post_categories( $post_id, array($post_category));
-//            }
-//        }//else close
+        
     if($post_id)
     {
         //adding author name as post meta field
