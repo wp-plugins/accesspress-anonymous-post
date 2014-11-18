@@ -1,5 +1,5 @@
 === AccessPress Anonymous Post ===
-Contributors: access-keys
+Contributors: Access Keys
 Tags: Guest Post,User Post,Anonymous post,Front end post,Guest Author,Frontend form post,Frontend form,Form post,Guest blog,Guest blogging,User submitted post,Post, plugin, posts, shortcode
 Donate link: http://accesspressthemes.com/donation/
 Requires at least: 3.8
