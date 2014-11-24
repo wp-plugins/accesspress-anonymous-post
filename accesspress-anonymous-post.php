@@ -4,7 +4,7 @@ defined('ABSPATH') or die("No script kiddies please!");
  * Plugin Name:AccessPress Anonymous Post
  * Plugin URI: http://accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post/
  * Description: A plugin that provides the ability to publish post from frontend with or without login anonymously using a simple html5 form from anywhere of the site with the help of shortcode and handful of backend settings.
- * Version:2.0.2
+ * Version:2.0.3
  * Author:AccessPress Themes
  * Author URI:http://accesspressthemes.com/
  * License:GPLv2 or later
@@ -288,9 +288,25 @@ defined('ABSPATH') or die("No script kiddies please!");
             $message = __('Hello there,','anonymous-post').'<br/><br/>'. 
                         __('A new post has been submitted via AccessPress Anonymous post plugin in ','anonymous-post').$blogname.' site.'.__(' Please find details below:','anonymous-post').'<br/><br/>'.
                         
-                        'Post title: '.$post_title.'<br/><br/>
+                        'Post title: '.$post_title.'<br/><br/>';
+            $post_author_name = get_post_meta($post_id,'ap_author_name',true);
+            $post_author_email = get_post_meta($post_id,'ap_author_email',true);
+            $post_author_url = get_post_meta($post_id,'ap_author_url',true);
+            if($post_author_name!='')
+            {
+                $message .= 'Post Author Name: '.$post_author_name.'<br/><br/>';
+            }
+            if($post_author_email!='')
+            {
+                $message .= 'Post Author Email: '.$post_author_email.'<br/><br/>';
+            }
+            if($post_author_url!='')
+            {
+                $message .= 'Post Author URL: '.$post_author_url.'<br/><br/>';
+            }
+      
                         
-                        ____<br/><br/>
+            $message .= '____<br/><br/>
                         '.__('To take action (approve/reject)- please go here:','anonymous-post').'<br/>'
                         .admin_url().'post.php?post='.$post_id.'&action=edit <br/><br/>
                         

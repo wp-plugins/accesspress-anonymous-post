@@ -4,7 +4,7 @@ Tags: Guest Post,User Post,Anonymous post,Front end post,Guest Author,Frontend f
 Donate link: http://accesspressthemes.com/donation/
 Requires at least: 3.8
 Tested up to: 4.0
-Stable tag: 2.0.2
+Stable tag: 2.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,7 +45,7 @@ If you're looking for Free WordPress guest post plugin, User Post Plugin, Anonym
 
 = Premium Upgrades =
 * For  <strong>Free</strong> and <strong>Premium</strong> features comparision please go [here](https://accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post/#comparision).
-* For Premium upgrades please go [here](http://accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post-premium/).
+* For Premium upgrades please go [here](https://accesspressthemes.com/comparision/accesspress-anonymous-post-accesspress-anonymous-pro-comparision/).
 
 [youtube https://www.youtube.com/watch?v=TjZNcVG3fDE]
 
@@ -100,6 +100,9 @@ Once you install the plugin , you can check some general documentation about how
 4. Frontend Form 
 
 == Changelog ==
+= 2.0.3 =
+* Added Post Author Details in the admin notification email
+
 = 2.0.2 =
 * Code Cleanup
 
