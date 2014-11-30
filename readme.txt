@@ -1,14 +1,14 @@
 === AccessPress Anonymous Post ===
 Contributors: Access Keys
-Tags: Guest Post,User Post,Anonymous post,Front end post,Guest Author,Frontend form post,Frontend form,Form post,Guest blog,Guest blogging,User submitted post,Post, plugin, posts, shortcode
+Tags: guest post, user post, anonymous post, frontend post, guest author, frontend form post, frontend form, form post, guest blog, guest blogging, user submitted post, post, plugin, posts, shortcode
 Donate link: http://accesspressthemes.com/donation/
 Requires at least: 3.8
 Tested up to: 4.0
-Stable tag: 2.0.3
+Stable tag: 2.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A plugin that provides the ability to publish post from frontend with or without login using a simple html5 form.
+Frontend/Guest post | Both logged in and not logged in users can post | Admin can list the posts and take native WP post actions | Highly customizable
 
 == Description ==
 <strong>Anonymous posting</strong>(guest posting / front end posting / posting without login) - is made easy with <strong>AccessPress Anonymous Post</strong>.
@@ -19,36 +19,37 @@ If you're looking for Free WordPress guest post plugin, User Post Plugin, Anonym
 
 <strong>Features:</strong>
 
-* Submit post from frontend as a not logged in user or as a logged in user.
-* Enter Tags for the post
-* Plugin option page - User can customize settings.
-* Email notification to admin email after successful post submission.
-* Customized Post Submission message.
-* Field Selection ability.
-* Required Fields Selection Ability
-* Anyone can post from anywhere in the site
-* Category selection
-* Add featured image to the post. More than one image and other media items can be added to the post if logged in.
-* Captcha for secure posting which can be enabled and disabled from plugin settings page
-* Use short code to display the submission form anywhere
-* Post submissions may include title, tags, category, author, URL, post image
-* HTML5 submission form with streamlined CSS styles
-* Posts will be directly saved into WordPress database and will show up in Admin Dashboard as pending post or any selected status with given Title, Description, Category and Tags.
-* Option to assign post to specific category or let users choose category from frontend
-* Moderator will be able to review and approve them as needed.
-* Authors Name, Author URL and email will be added as custom field.
-* Simple and user friendly
-* Dedicated forum support
-* Online chat support
-* Email support
-* Premium upgrades available
+* <strong>Submit post from frontend as a not logged in user or as a logged in user.</strong>
+* <strong>Enter Tags for the post</strong>
+* <strong>Plugin option page - User can customize settings.</strong>
+* <strong>Email notification to admin email after successful post submission.</strong>
+* <strong>Customized Post Submission message.</strong>
+* <strong>Field Selection ability.</strong>
+* <strong>Required Fields Selection Ability</strong>
+* <strong>Anyone can post from anywhere in the site</strong>
+* <strong>Category selection</strong>
+* <strong>Add featured image to the post. More than one image and other media items can be added to the post if logged in.</strong>
+* <strong>Captcha for secure posting which can be enabled and disabled from plugin settings page</strong>
+* <strong>Use short code to display the submission form anywhere</strong>
+* <strong>Post submissions may include title, tags, category, author, URL, post image</strong>
+* <strong>HTML5 submission form with streamlined CSS styles</strong>
+* <strong>Posts will be directly saved into WordPress database and will show up in Admin Dashboard as pending post or any selected status with given Title, Description, Category and Tags.</strong>
+* <strong>Option to assign post to specific category or let users choose category from frontend</strong>
+* <strong>Moderator will be able to review and approve them as needed.</strong>
+* <strong>Authors Name, Author URL and email will be added as custom field.</strong>
+* <strong>Simple and user friendly</strong>
+* <strong>Dedicated forum support</strong>
+* <strong>Online chat support</strong>
+* <strong>Email support</strong>
+* <strong>Premium upgrades available</strong>
+
+= Easy and detailed video tutorial: = 
+[youtube https://www.youtube.com/watch?v=TjZNcVG3fDE]
+
 
 = Premium Upgrades =
 * For  <strong>Free</strong> and <strong>Premium</strong> features comparision please go [here](https://accesspressthemes.com/comparision/accesspress-anonymous-post-accesspress-anonymous-pro-comparision/).
 * For Premium upgrades please go [here](http://accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post-premium/).
-
-[youtube https://www.youtube.com/watch?v=TjZNcVG3fDE]
-
 
 = Some Useful Links =
 * <strong>Support Email</strong>: support@accesspressthemes.com
@@ -100,6 +101,9 @@ Once you install the plugin , you can check some general documentation about how
 4. Frontend Form 
 
 == Changelog ==
+= 2.0.4 =
+* Fixed small bug regarding plugin text domain for better translation
+
 = 2.0.3 =
 * Added Post Author Details in the admin notification email
 
