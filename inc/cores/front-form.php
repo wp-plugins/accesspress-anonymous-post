@@ -161,13 +161,18 @@ if(in_array('author_email',$ap_settings['form_included_fields']))
 
 if($ap_settings['captcha_settings']==1)
 {
-    $captcha_label = ($ap_settings['math_captcha_label']=='')?__('Human Check'):esc_attr($ap_settings['math_captcha_label']);
+    $captcha_error_msg = (isset($error->captcha))?$error->captcha:'';
+    $number1 = rand(1,9);
+    $number2 = rand(1,9);
+    $captcha_label = ($ap_settings['math_captcha_label']=='')?__('Human Check','anonymous-post'):esc_attr($ap_settings['math_captcha_label']);
     $form .='<div class="ap-form-field-wrapper">
               <label>'.$captcha_label.'</label>
               <div class="ap-form-field math-captcha">
-                <span class="ap-captcha-first-num">'.rand(1,9).'</span>+<span class="ap-captcha-second-num">'.rand(1,9).'</span>=<input type="text" id="ap-captcha-result" placeholder="'.__('Enter Sum','anonymous-post').' required">
+                <span class="ap-captcha-first-num">'.$number1.'</span>+<span class="ap-captcha-second-num">'.$number2.'</span>=<input type="text" name="ap_captcha_result" id="ap-captcha-result" placeholder="'.__('Enter Sum','anonymous-post').'" class="ap-required-field">
+                <input type="hidden" name="ap_num1" value="'.$number1.'"/>
+                <input type="hidden" name="ap_num2" value="'.$number2.'"/>
               </div>
-              <div class="ap-form-error-message ap-captcha-error-msg" data-captcha-error-msg="'.esc_attr($ap_settings['math_captcha_error_message']).'"></div> 
+              <div class="ap-form-error-message ap-captcha-error-msg" data-captcha-error-msg="'.esc_attr($ap_settings['math_captcha_error_message']).'">'.$captcha_error_msg.'</div> 
             </div><!--ap-form-field-wrapper-->';
 }    
     

@@ -6,6 +6,19 @@ $ap_form_post_title = sanitize_text_field($_POST['ap_form_post_title']);
 $ap_form_content = $_POST['ap_form_content_editor'];
 $error = new stdClass();
 $error_flag = 0;
+//captcha server validation
+if($ap_settings['captcha_settings']=='1')
+{
+    $number1 = sanitize_text_field($_POST['ap_num1']);
+    $number2 = sanitize_text_field($_POST['ap_num2']);
+    $result = sanitize_text_field($_POST['ap_captcha_result']);
+    $actual_sum = $number1+$number2;
+    if($actual_sum!=$result)
+    {
+        $error_flag = 1;
+        $error->captcha = __('The entered sum is not correct','anonymous-post');
+    }
+}
 
 //if captcha is disabled or captcha has been entered correctly
 if($error_flag==0)

@@ -4,7 +4,7 @@ defined('ABSPATH') or die("No script kiddies please!");
  * Plugin Name:AccessPress Anonymous Post
  * Plugin URI: http://accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post/
  * Description: A plugin that provides the ability to publish post from frontend with or without login anonymously using a simple html5 form from anywhere of the site with the help of shortcode and handful of backend settings.
- * Version:2.0.4
+ * Version:2.0.5
  * Author:AccessPress Themes
  * Author URI:http://accesspressthemes.com/
  * Text Domain: anonymous-post
@@ -29,7 +29,11 @@ defined('ABSPATH') or die("No script kiddies please!");
  {
     define('AP_CSS_DIR',plugin_dir_url( __FILE__ ).'css');
  }
- 
+ if(!defined('AP_VERSION'))
+ {
+    define('AP_VERSION','2.0.5');
+ }
+  
  if(!class_exists('AP_Class'))
  {
     class AP_Class
@@ -80,8 +84,8 @@ defined('ABSPATH') or die("No script kiddies please!");
             //including the plugin's css and js only in plugin's settings page
             if(isset($_GET['page']) && $_GET['page']=='anonymous-post')
             {
-                wp_enqueue_script('ap-admin-script',AP_JS_DIR.'/admin-script.js',array('jquery'));
-                wp_enqueue_style('ap-admin-style',AP_CSS_DIR.'/admin-style.css');
+                wp_enqueue_script('ap-admin-script',AP_JS_DIR.'/admin-script.js',array('jquery'),AP_VERSION);
+                wp_enqueue_style('ap-admin-style',AP_CSS_DIR.'/admin-style.css',false,AP_VERSION);
                 
             }
         }
@@ -93,9 +97,9 @@ defined('ABSPATH') or die("No script kiddies please!");
             //including plugin only if admin has selected the option to show
             if($ap_settings['plugin_styles']==1)
             {
-              wp_enqueue_style('ap-front-styles',AP_CSS_DIR.'/frontend-style.css');    
+              wp_enqueue_style('ap-front-styles',AP_CSS_DIR.'/frontend-style.css',false,AP_VERSION);    
             }
-            wp_enqueue_script('ap-frontend-js',AP_JS_DIR.'/frontend.js',array('jquery'),'',true);
+            wp_enqueue_script('ap-frontend-js',AP_JS_DIR.'/frontend.js',array('jquery'),AP_VERSION,true);
             wp_localize_script('ap-frontend-js','ap_form_required_message',__('This field is required','anonymous-post'));
             wp_localize_script('ap-frontend-js','ap_captcha_error_message',__('Sum is not correct.','anonymous-post'));
             
