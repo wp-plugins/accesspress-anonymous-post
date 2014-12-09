@@ -101,6 +101,7 @@ if(!empty($ap_settings['form_included_taxonomy']))
         }
                   
         $form .='</select>
+        </div><!--ap-form-field-->
         <div class="ap-form-error-message"></div>
                 </div><!--ap-form-field-wrapper-->';    
         }
