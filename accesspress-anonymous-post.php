@@ -4,7 +4,7 @@ defined('ABSPATH') or die("No script kiddies please!");
  * Plugin Name:AccessPress Anonymous Post
  * Plugin URI: http://accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post/
  * Description: A plugin that provides the ability to publish post from frontend with or without login anonymously using a simple html5 form from anywhere of the site with the help of shortcode and handful of backend settings.
- * Version:2.0.5
+ * Version:2.0.6
  * Author:AccessPress Themes
  * Author URI:http://accesspressthemes.com/
  * Text Domain: anonymous-post
@@ -31,7 +31,7 @@ defined('ABSPATH') or die("No script kiddies please!");
  }
  if(!defined('AP_VERSION'))
  {
-    define('AP_VERSION','2.0.5');
+    define('AP_VERSION','2.0.6');
  }
   
  if(!class_exists('AP_Class'))
@@ -72,9 +72,10 @@ defined('ABSPATH') or die("No script kiddies please!");
         //grabes the posted form data and save post accordingly
         function submit_form()
         {
-            if(isset($_POST['ap_form_submit_btn'],$_POST['ap_form_nonce']))
+           
+            if(isset($_POST['ap_form_nonce']) && wp_verify_nonce($_POST['ap_form_nonce'],'ap_form_nonce'))
             {
-                include_once('inc/cores/save-post.php');
+                 include_once('inc/cores/save-post.php');
             }
         }
         

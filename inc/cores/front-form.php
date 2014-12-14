@@ -169,7 +169,7 @@ if($ap_settings['captcha_settings']==1)
     $form .='<div class="ap-form-field-wrapper">
               <label>'.$captcha_label.'</label>
               <div class="ap-form-field math-captcha">
-                <span class="ap-captcha-first-num">'.$number1.'</span>+<span class="ap-captcha-second-num">'.$number2.'</span>=<input type="text" name="ap_captcha_result" id="ap-captcha-result" placeholder="'.__('Enter Sum','anonymous-post').'" class="ap-required-field">
+                <span class="ap-captcha-first-num">'.$number1.'</span>+<span class="ap-captcha-second-num">'.$number2.'</span>=<input type="text" name="ap_captcha_result" id="ap-captcha-result" placeholder="'.__('Enter Sum','anonymous-post').'" class="ap-required-field" data-required-message="'.$required_message.'">
                 <input type="hidden" name="ap_num1" value="'.$number1.'"/>
                 <input type="hidden" name="ap_num2" value="'.$number2.'"/>
               </div>

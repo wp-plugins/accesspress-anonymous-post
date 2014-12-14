@@ -8,7 +8,8 @@ function check_form_submittable()
         var user_result = jQuery('#ap-captcha-result').val();
         if(result==user_result)
         {
-            
+            jQuery('.ap-form-submit-button').attr('disabled','disabled');
+            //$(this).closest('form').submit();
             return true;
         }
         else
@@ -25,6 +26,7 @@ function check_form_submittable()
     }
     else
     {
+        jQuery('.ap-form-submit-button').attr('disabled','disabled');
         return true;
     }
     
@@ -40,8 +42,9 @@ function check_form_submittable()
             //Checking  required fields
             $('.ap-form-submit-button').click(function(){
                var error_flag = 0;
-               $('.ap-form-wrapper input').each(function(){
-                if($(this).hasClass('ap-required-field') && $(this).val()=='')
+               $('.ap-form-wrapper input[type="text"]').each(function(){
+                var value = $.trim($(this).val());
+                if($(this).hasClass('ap-required-field') && value=='')
                 {
                     
                     error_flag = 1;
@@ -103,7 +106,9 @@ function check_form_submittable()
               });
                 if(error_flag==0)
                 {
-                    return true;
+                    //alert('test');
+                   
+                   return true;
                 }
                 else
                 {

@@ -4,7 +4,7 @@ Tags: guest post, user post, anonymous post, frontend post, guest author, fronte
 Donate link: http://accesspressthemes.com/donation/
 Requires at least: 3.8
 Tested up to: 4.0
-Stable tag: 2.0.5
+Stable tag: 2.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,7 +17,7 @@ Frontend/Guest post | Both logged in and not logged in users can post | Admin ca
 
 If you're looking for Free WordPress guest post plugin, User Post Plugin, Anonymous post plugin, Front end post plugin, Guest Author plugin, Frontend form post feature, Guest blogging plugin, User submitted post then <strong>AccessPress Anonymous Post</strong> is the right one!
 
-<strong>Features:</strong>
+<strong>Free Features:</strong>
 
 * <strong>Submit post from frontend as a not logged in user or as a logged in user.</strong>
 * <strong>Enter Tags for the post</strong>
@@ -43,13 +43,29 @@ If you're looking for Free WordPress guest post plugin, User Post Plugin, Anonym
 * <strong>Email support</strong>
 * <strong>Premium upgrades available</strong>
 
-= Easy and detailed video tutorial: = 
-[youtube https://www.youtube.com/watch?v=TjZNcVG3fDE]
+<strong>Premium Features</strong>
 
+* <strong>Unlimited Forms</strong>
+* <strong>Unlimited Custom Fields with all the forms fields(textfield, textarea, checkbox, radio buttons, select options, datepicker, file uploader etc)</strong>
+* <strong>Custom Post type and taxonomy support</strong>
+* <strong>Drag and Drop form builder</strong>
+* <strong>Admin and User email notifications customziation option along with email addresses</strong>
+* <strong>Multiple Image, video , audio upload without needing to login</strong>
+* <strong>Full Secure Google Captcha for preventing 99% spams</strong>
+* <strong>Beautifully Designed 4 form templates available</strong>
+* <strong>Form Styler available for styling form as per your theme</strong>
+* <strong>Inline login option </strong>
+* <strong>Suggested Text/Tooltips</strong>
+* <strong>And many more...</strong>
 
 = Premium Upgrades =
 * For  <strong>Free</strong> and <strong>Premium</strong> features comparision please go [here](https://accesspressthemes.com/comparision/accesspress-anonymous-post-accesspress-anonymous-pro-comparision/).
 * For Premium upgrades please go [here](http://accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post-premium/).
+
+
+= Easy and detailed video tutorial: = 
+[youtube https://www.youtube.com/watch?v=TjZNcVG3fDE]
+
 
 = Some Useful Links =
 * <strong>Support Email</strong>: support@accesspressthemes.com
@@ -101,6 +117,10 @@ Once you install the plugin , you can check some general documentation about how
 4. Frontend Form 
 
 == Changelog ==
+= 2.0.6 =
+* Done some modifications in javascript validation for more better and secure require fields validation
+* Fixed multiple submit button clicks submitting multiple posts bug
+
 = 2.0.5 =
 * Added server side captcha validation feature for making the form more secure and preventing the spams 
 
