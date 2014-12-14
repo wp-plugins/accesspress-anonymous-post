@@ -17,7 +17,7 @@ Frontend/Guest post | Both logged in and not logged in users can post | Admin ca
 
 If you're looking for Free WordPress guest post plugin, User Post Plugin, Anonymous post plugin, Front end post plugin, Guest Author plugin, Frontend form post feature, Guest blogging plugin, User submitted post then <strong>AccessPress Anonymous Post</strong> is the right one!
 
-<strong>Free Features:</strong>
+= Free Features: =
 
 * <strong>Submit post from frontend as a not logged in user or as a logged in user.</strong>
 * <strong>Enter Tags for the post</strong>
@@ -43,7 +43,7 @@ If you're looking for Free WordPress guest post plugin, User Post Plugin, Anonym
 * <strong>Email support</strong>
 * <strong>Premium upgrades available</strong>
 
-<strong>Premium Features</strong>
+= Premium Features =
 
 * <strong>Unlimited Forms</strong>
 * <strong>Unlimited Custom Fields with all the forms fields(textfield, textarea, checkbox, radio buttons, select options, datepicker, file uploader etc)</strong>
