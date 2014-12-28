@@ -4,7 +4,7 @@ defined('ABSPATH') or die("No script kiddies please!");
  * Plugin Name:AccessPress Anonymous Post
  * Plugin URI: http://accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post/
  * Description: A plugin that provides the ability to publish post from frontend with or without login anonymously using a simple html5 form from anywhere of the site with the help of shortcode and handful of backend settings.
- * Version:2.0.7
+ * Version:2.0.8
  * Author:AccessPress Themes
  * Author URI:http://accesspressthemes.com/
  * Text Domain: anonymous-post
@@ -31,7 +31,7 @@ defined('ABSPATH') or die("No script kiddies please!");
  }
  if(!defined('AP_VERSION'))
  {
-    define('AP_VERSION','2.0.6');
+    define('AP_VERSION','2.0.8');
  }
   
  if(!class_exists('AP_Class'))
@@ -109,7 +109,7 @@ defined('ABSPATH') or die("No script kiddies please!");
         //Adds admin menu 
         function add_ap_menu()
         {
-            add_menu_page('AccessPress Anonymoust Post Settings','AccessPress Anonymous Post','manage_options','anonymous-post',array($this,'ap_settings'),AP_IMAGE_DIR.'/ap-icon.png');
+            add_menu_page(__('AccessPress Anonymoust Post Settings','anonymous-post'),__('AccessPress Anonymous Post','anonymous-post'),'manage_options','anonymous-post',array($this,'ap_settings'),AP_IMAGE_DIR.'/ap-icon.png');
         }
         
         //returns the ID of the first user
@@ -373,7 +373,7 @@ defined('ABSPATH') or die("No script kiddies please!");
             $ap_settings['publish_status'] = 'draft';
             $ap_settings['admin_notification'] = 1;
             $ap_settings['login_check'] = 0;
-            $ap_settings['login_message'] = 'Please login to submit the post.';
+            $ap_settings['login_message'] = __('Please login to submit the post.','anonymous-post');
             $ap_settings['login_link_text'] = '';
             $ap_settings['post_author'] = $this->get_first_user_id();
             $ap_settings['plugin_styles'] = 1;
@@ -402,7 +402,7 @@ defined('ABSPATH') or die("No script kiddies please!");
             $ap_settings['admin_email_list'] = array();
             $ap_settings['math_captcha_error_message'] = '';
             $restore = update_option('ap_settings',$ap_settings);
-            $_SESSION['ap_message'] = 'Default Settings Restored Successfully.';
+            $_SESSION['ap_message'] = __('Default Settings Restored Successfully.','anonymous-post');
             wp_redirect(admin_url().'admin.php?page=anonymous-post');
             exit;
                 
