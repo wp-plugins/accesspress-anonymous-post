@@ -56,15 +56,8 @@
 								<li><a href="https://plus.google.com/u/0/+Accesspressthemesprofile/about" target="_blank"><img src="<?php echo AP_IMAGE_DIR;?>/googleplus.png" alt="google+"></a></li>
 								<li><a href="http://www.pinterest.com/accesspresswp/" target="_blank"><img src="<?php echo AP_IMAGE_DIR;?>/pinterest.png" alt="pinterest"></a></li>
 								<li><a href="https://www.flickr.com/photos/accesspressthemes/" target="_blank"><img src="<?php echo AP_IMAGE_DIR;?>/flicker.png" alt="flicker"></a></li>
-								<li><a href="https://twitter.com/apthemes" target="_blank"><img src="<?php echo AP_IMAGE_DIR;?>/twitter.png" alt="twitter"></a></li>
+								<li><a href="https://twitter.com/apthemes" target="_blank"><img src="<?php echo AP_IMAGE_DIR;?>/twitter.png" alt="twitter"/></a></li>
 							</ul>
 
-							<!--<p>
-								<strong>Other social profiles: </strong><br />
-								<strong>Google+:</strong> <a href="https://plus.google.com/106385805875992204629/" target="_blank">https://plus.google.com/106385805875992204629/</a><br />
-								<strong>Pinterest:</strong> <a href="http://www.pinterest.com/accesspresswp/" target="_blank">http://www.pinterest.com/accesspresswp/</a><br />
-								<strong>Flicker:</strong> <a href="https://www.flickr.com/photos/accesspressthemes/" target="_blank">https://www.flickr.com/photos/accesspressthemes/</a><br />
-								<strong>Twitter:</strong> <a href="https://twitter.com/apthemes" target="_blank">https://twitter.com/apthemes</a>
-							</p>-->
 						</div>
 					</div>
