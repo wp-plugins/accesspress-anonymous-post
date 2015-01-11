@@ -85,7 +85,7 @@ if($error_flag==0)
         
         $post_type = 'post'; 
         $publish_status = $ap_settings['publish_status'];
-        if($ap_settings['login_check']==1)
+        if($ap_settings['login_check']==1 || is_user_logged_in())
         {
             $author = get_current_user_id();
         }
