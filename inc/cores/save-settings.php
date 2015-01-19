@@ -131,6 +131,7 @@ $ap_settings['author_url_label'] = $author_url_label;
 $ap_settings['author_email_label'] = $author_email_label;
 $ap_settings['post_submit_label'] = $post_submit_label;
 $ap_settings['editor_type'] = $editor_type;
+$ap_settings['editor_size'] = $editor_size;
 $taxonomies_array = explode(',',$taxonomy_reference);
 foreach($taxonomies_array as $tax)
 {

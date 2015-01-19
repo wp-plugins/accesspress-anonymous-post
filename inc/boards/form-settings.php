@@ -190,6 +190,13 @@
       </select>
     </div>
   </div>
+  <div class="ap-option-wrapper">
+    <label><?php _e('Editor Size','anonymous-post');?></label>
+    <div class="ap-option-field">
+      <input type="text" name="editor_size" value="<?php echo (isset($ap_settings['editor_size']))?$ap_settings['editor_size']:'';?>"/>
+      <div class="ap-option-note ap-option-width"><?php _e('Please enter the size of editor in number of rows.Default number of rows is 10','anonymous-post');?></div>
+    </div>
+  </div>
 </div>
 </div><!--Form Configurations-->
 <div class="line"></div>
