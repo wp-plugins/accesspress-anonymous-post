@@ -56,20 +56,35 @@
  * Changes all the posted fields into its respective variables from $_POST
  * */
  
- 
+ //$this->print_array($_POST);die();
  //for stripping unnecessary slashes
  $_POST = array_map( 'stripslashes_deep', $_POST );
  foreach($_POST as $key=>$val)
         {
+            
             if(is_array($val))
             {
-                $new_array = array();
-                foreach($val as $value)
+                 $new_array = array();
+                if($key!='form_required_message')
                 {
-                    $new_array[] = sanitize_text_field($value);//sanitizing each and every field that is being recieved as array    
-                      
+                   
+                    foreach($val as $value)
+                    {
+                        $new_array[] = sanitize_text_field($value);//sanitizing each and every field that is being recieved as array    
+                          
+                    }
+                    
+                }
+                else
+                {
+                    foreach($val as $k=>$v)
+                    {
+                        $new_array[$k] = sanitize_text_field($v);
+                    }
+                    
                 }
                 $val = $new_array;
+                
             }
             else
             {
@@ -91,7 +106,7 @@
             
             $$key = $val;
         }
- 
+ //$this->print_array($form_required_message);die();
 $ap_settings = array();//array for saving all the plugin's settings in single array
 $ap_settings['publish_status'] = $publish_status;
 if(isset($admin_notification))
@@ -118,6 +133,7 @@ $ap_settings['post_submission_message'] = $post_submission_message;
 $ap_settings['form_title'] = $form_title;
 $ap_settings['form_included_fields'] = (isset($form_included_fields) && !empty($form_included_fields))?$form_included_fields:array('post_title','post_content');
 $ap_settings['form_required_fields'] = (isset($form_required_fields) && !empty($form_required_fields))?$form_required_fields:array('post_title','post_content');
+$ap_settings['form_required_message'] = $form_required_message;
 $ap_settings['taxonomy_reference'] = $taxonomy_reference;
 $ap_settings['form_included_taxonomy'] = isset($form_included_taxonomy)?$form_included_taxonomy:array();
 $ap_settings['media_upload'] = isset($media_upload)?1:0;

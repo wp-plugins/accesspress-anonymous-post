@@ -9,6 +9,15 @@ $post_image_label = ($ap_settings['post_image_label'])==''?__('Post Image','anon
 $post_submit_label = ($ap_settings['post_submit_label']=='')?__('Submit Post','anonymous-post'):esc_attr($ap_settings['post_submit_label']);
 $form_required_fields = isset($ap_settings['form_required_fields'])?$ap_settings['form_required_fields']:array();
 $required_message = __('This field is required','anonymous-post');
+$post_title_required_message = isset($ap_settings['form_required_message']['post_title'])?esc_attr($ap_settings['form_required_message']['post_title']):$required_message;
+$post_content_required_message = isset($ap_settings['form_required_message']['post_content'])?esc_attr($ap_settings['form_required_message']['post_content']):$required_message;
+$post_excerpt_required_message = isset($ap_settings['form_required_message']['post_excerpt'])?esc_attr($ap_settings['form_required_message']['post_excerpt']):$required_message;
+$post_image_required_message = isset($ap_settings['form_required_message']['post_image'])?esc_attr($ap_settings['form_required_message']['post_image']):$required_message;
+$author_name_required_message = isset($ap_settings['form_required_message']['author_name'])?esc_attr($ap_settings['form_required_message']['author_name']):$required_message;
+$author_url_required_message = isset($ap_settings['form_required_message']['author_url'])?esc_attr($ap_settings['form_required_message']['author_url']):$required_message;
+$author_email_required_message = isset($ap_settings['form_required_message']['author_email'])?esc_attr($ap_settings['form_required_message']['author_email']):$required_message;
+$category_required_message = isset($ap_settings['form_required_message']['category'])?esc_attr($ap_settings['form_required_message']['category']):$required_message;
+$post_tag_required_message = isset($ap_settings['form_required_message']['post_tag'])?esc_attr($ap_settings['form_required_message']['post_tag']):$required_message;
 
 global $error;
 
@@ -40,7 +49,7 @@ if(isset($_SESSION['ap_form_success_msg']) && $ap_settings['redirect_url']=='')
 $form .='<form method="post" action="" enctype="multipart/form-data" class="ap-form-wrapper" onsubmit="return check_form_submittable()">
                 <div class="ap-form-field-wrapper">
                   <label>'.$post_title_label.'</label>
-                  <div class="ap-form-field"><input type="text" name="ap_form_post_title" class="ap-required-field" data-required-message="'.__('This field is required','anonymous-post').'"/></div>';
+                  <div class="ap-form-field"><input type="text" name="ap_form_post_title" class="ap-required-field" data-required-message="'.$post_title_required_message.'"/></div>';
 $error_title = isset($error->title)?$error->title:'';
 $form .= '<div class="ap-form-error-message">'.$error_title.'</div>';    
 
@@ -50,7 +59,7 @@ $form .= '</div><!--ap-form-field-wrapper-->
                   <label>'.$post_content_label.'</label>
                   <div class="ap-form-field">'.$wp_editor.'</div>';
 $error_content = (isset($error->content))?$error->content:'';
-$form .= '<div class="ap-form-error-message ap-content-error-message" data-required-message="'.__('This field is required','anonymous-post').'">'.$error_content.'</div>';
+$form .= '<div class="ap-form-error-message ap-content-error-message" data-required-message="'.$post_content_required_message.'">'.$error_content.'</div>';
 $form .= '</div><!--ap-form-field-wrapper-->';
  
 //for including post excerpt
@@ -61,7 +70,7 @@ if(in_array('post_excerpt',$ap_settings['form_included_fields']))
     $form .='<div class="ap-form-field-wrapper">
                 <label>'.$post_excerpt_label.'</label>
                 <div class="ap-form-field">
-                  <textarea name="ap_form_post_excerpt" '.$required.' data-required-message="'.$required_message.'"></textarea>
+                  <textarea name="ap_form_post_excerpt" '.$required.' data-required-message="'.$post_excerpt_required_message.'"></textarea>
                 </div><!--ap-form-field-->';
         $form .='</div><!--ap-form-field-wrapper-->';
 } 
@@ -74,7 +83,7 @@ if(in_array('post_image',$ap_settings['form_included_fields']))
     $form .='<div class="ap-form-field-wrapper">
                 <label>'.$post_image_label.'</label>
                 <div class="ap-form-field">
-                  <input type="file" name="ap_form_post_image" '.$required.' data-required-message="'.$required_message.'"/>
+                  <input type="file" name="ap_form_post_image" '.$required.' data-required-message="'.$post_image_required_message.'"/>
                 </div><!--ap-form-field-->';
         $form .= '<div class="ap-form-error-message">'.$error_image.'</div>';
     $form .='</div><!--ap-form-field-wrapper-->';
@@ -93,7 +102,7 @@ if(!empty($ap_settings['form_included_taxonomy']))
         $form .='<div class="ap-form-field-wrapper">
                    <label>'.$taxonomy_form_label.'</label>
                 <div class="ap-form_field">
-                  <select name="'.$taxonomy.'_taxonomy" '.$required.' data-required-message="'.$required_message.'">';
+                  <select name="'.$taxonomy.'_taxonomy" '.$required.' data-required-message="'.$category_required_message.'">';
         $terms = get_terms($taxonomy,array('hide_empty'=>0,'order'=>'ASC','orderby'=>'id'));
         foreach($terms as $term)
         {
@@ -112,7 +121,7 @@ if(!empty($ap_settings['form_included_taxonomy']))
             $form .='<div class="ap-form-field-wrapper">
                         <label>'.$tag_label.'</label>
                         <div class="ap-form-field">
-                          <input type="text" name="post_tag_taxonomy" '.$required.' data-required-message="'.$required_message.'"/>
+                          <input type="text" name="post_tag_taxonomy" '.$required.' data-required-message="'.$post_tag_required_message.'"/>
                         </div><!--ap-form-field-->
                         <div class="ap-form-error-message"></div>
                     </div><!--ap-form-field-wrapper-->';
@@ -129,7 +138,7 @@ if(in_array('author_name',$ap_settings['form_included_fields']))
     $form .='<div class="ap-form-field-wrapper">
                 <label>'.$author_name_label.'</label>
                 <div class="ap-form-field">
-                   <input type="text" name="ap_author_name" '.$required.' data-required-message="'.$required_message.'"/> 
+                   <input type="text" name="ap_author_name" '.$required.' data-required-message="'.$author_name_required_message.'"/> 
                 </div><!--ap-form-field-->
                 <div class="ap-form-error-message"></div>
              </div><!--ap-form-field-wrapper-->';
@@ -141,7 +150,7 @@ if(in_array('author_url',$ap_settings['form_included_fields']))
     $form .='<div class="ap-form-field-wrapper">
                 <label>'.$author_url_label.'</label>
                 <div class="ap-form-field">
-                   <input type="text" name="ap_author_url" '.$required.' data-required-message="'.$required_message.'"/> 
+                   <input type="text" name="ap_author_url" '.$required.' data-required-message="'.$author_url_required_message.'"/> 
                 </div><!--ap-form-field-->
                 <div class="ap-form-error-message"></div>
              </div><!--ap-form-field-wrapper-->';
@@ -153,7 +162,7 @@ if(in_array('author_email',$ap_settings['form_included_fields']))
     $form .='<div class="ap-form-field-wrapper">
                 <label>'.$author_email_label.'</label>
                 <div class="ap-form-field">
-                   <input type="email" name="ap_author_email" '.$required.' data-required-message="'.$required_message.'"/> 
+                   <input type="email" name="ap_author_email" '.$required.' data-required-message="'.$author_email_required_message.'"/> 
                 </div><!--ap-form-field-->
                 <div class="ap-form-error-message"></div>
              </div><!--ap-form-field-wrapper-->';

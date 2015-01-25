@@ -42,7 +42,7 @@ function check_form_submittable()
             //Checking  required fields
             $('.ap-form-submit-button').click(function(){
                var error_flag = 0;
-               $('.ap-form-wrapper input[type="text"]').each(function(){
+               $('.ap-form-wrapper input[type="text"],.ap-form-wrapper input[type="file"],.ap-form-wrapper input[type="email"]').each(function(){
                 var value = $.trim($(this).val());
                 if($(this).hasClass('ap-required-field') && value=='')
                 {

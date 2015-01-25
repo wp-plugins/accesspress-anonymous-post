@@ -11,10 +11,14 @@
           </div><!--ap-fioelds-label-->
           <div class="ap-fields-configurations">
             <div class="ap-included-single-wrap">
-              <input type="checkbox" name="form_included_fields[]" value="post_title" checked="checked" onclick="return false;"/><span><?php _e('Show on form','anonymous-post');?></span>
+              <label><input type="checkbox" name="form_included_fields[]" value="post_title" checked="checked" onclick="return false;"/><span><?php _e('Show on form','anonymous-post');?></span></label>
             </div>
             <div class="ap-included-single-wrap">
-              <input type="checkbox" name="form_required_fields[]" value="post_title" checked="checked" onclick="return false;"/><span><?php _e('Required','anonymous-post');?></span>
+              <label><input type="checkbox" name="form_required_fields[]" value="post_title" checked="checked" onclick="return false;"/><span><?php _e('Required','anonymous-post');?></span></label>
+               
+            </div>
+            <div class="ap-included-single-wrap">
+                 <input type="text" name="form_required_message[post_title]" placeholder="<?php _e('Post Title Required Message','anonymous-post');?>" value="<?php echo isset($ap_settings['form_required_message']['post_title'])?esc_attr($ap_settings['form_required_message']['post_title']):'';?>" class="ap-required-message"/>
             </div>
           </div><!--ap-fields-configurations-->
          </div><!--ap-each-config-wrapper-->
@@ -27,10 +31,13 @@
           </div><!--ap-fioelds-label-->
           <div class="ap-fields-configurations">
             <div class="ap-included-single-wrap">
-              <input type="checkbox" name="form_included_fields[]" value="post_content" checked="checked" onclick="return false;"/><span><?php _e('Show on form','anonymous-post');?></span>
+              <label><input type="checkbox" name="form_included_fields[]" value="post_content" checked="checked" onclick="return false;"/><span><?php _e('Show on form','anonymous-post');?></span></label>
             </div>
             <div class="ap-included-single-wrap">
-              <input type="checkbox" name="form_required_fields[]" value="post_content" checked="checked" onclick="return false;"/><span><?php _e('Required','anonymous-post');?></span>
+              <label><input type="checkbox" name="form_required_fields[]" value="post_content" checked="checked" onclick="return false;"/><span><?php _e('Required','anonymous-post');?></span></label>
+            </div>
+             <div class="ap-included-single-wrap">
+                 <input type="text" name="form_required_message[post_content]" placeholder="<?php _e('Post Content Required Message','anonymous-post');?>" value="<?php echo isset($ap_settings['form_required_message']['post_content'])?esc_attr($ap_settings['form_required_message']['post_content']):'';?>"  class="ap-required-message"/>
             </div>
           </div><!--ap-fields-configurations-->
         </div><!--ap-each-config-warpper-->
@@ -43,12 +50,14 @@
           </div><!--ap-fioelds-label-->
           <div class="ap-fields-configurations">
             <div class="ap-included-single-wrap">
-              <input type="checkbox" name="form_included_fields[]" value="post_excerpt" <?php if(in_array('post_excerpt',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Show on form','anonymous-post');?></span>
+              <label><input type="checkbox" name="form_included_fields[]" value="post_excerpt" <?php if(in_array('post_excerpt',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Show on form','anonymous-post');?></span></label>
             </div>
             <div class="ap-included-single-wrap">
-              <input type="checkbox" name="form_required_fields[]" value="post_excerpt" <?php if(in_array('post_excerpt',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post');?></span>
+              <label><input type="checkbox" name="form_required_fields[]" value="post_excerpt" <?php if(in_array('post_excerpt',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post');?></span></label>
             </div>
-
+             <div class="ap-included-single-wrap">
+                 <input type="text" name="form_required_message[post_excerpt]" placeholder="<?php _e('Excerpt Required Message','anonymous-post');?>" value="<?php echo isset($ap_settings['form_required_message']['post_excerpt'])?esc_attr($ap_settings['form_required_message']['post_excerpt']):'';?>"   class="ap-required-message"/>
+            </div>
           </div><!--ap-fields-configurations-->
         </div><!--ap-each-config-wrapper-->
         <!--Post Excerpt Ends-->
@@ -60,10 +69,13 @@
           </div><!--ap-fioelds-label-->
           <div class="ap-fields-configurations">
             <div class="ap-included-single-wrap">
-              <input type="checkbox" name="form_included_fields[]" value="post_image" <?php if(in_array('post_image',$ap_settings['form_included_fields'])){?>checked="checked"<?php }?>/><span><?php _e('Show in form','anonymous-post')?></span>
+              <label><input type="checkbox" name="form_included_fields[]" value="post_image" <?php if(in_array('post_image',$ap_settings['form_included_fields'])){?>checked="checked"<?php }?>/><span><?php _e('Show in form','anonymous-post')?></span></label>
             </div>
             <div class="ap-included-single-wrap">
-              <input type="checkbox" name="form_required_fields[]" value="post_image" <?php if(in_array('post_image',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post')?></span>
+              <label><input type="checkbox" name="form_required_fields[]" value="post_image" <?php if(in_array('post_image',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post')?></span></label>
+            </div>
+             <div class="ap-included-single-wrap">
+                 <input type="text" name="form_required_message[post_image]" placeholder="<?php _e('Post Image Required Message','anonymous-post');?>" value="<?php echo isset($ap_settings['form_required_message']['post_image'])?esc_attr($ap_settings['form_required_message']['post_image']):'';?>"   class="ap-required-message"/>
             </div>
           </div><!--ap-fields-configurations-->
         </div><!--ap-each-config-wrapper-->
@@ -76,10 +88,13 @@
           </div><!--ap-fioelds-label-->
           <div class="ap-fields-configurations">
             <div class="ap-included-single-wrap">
-              <input type="checkbox" name="form_included_fields[]" value="author_name" <?php if(in_array('author_name',$ap_settings['form_included_fields'])){?>checked="checked"<?php }?>/><span><?php _e('Show on form','anonymous-post');?></span>
+              <label><input type="checkbox" name="form_included_fields[]" value="author_name" <?php if(in_array('author_name',$ap_settings['form_included_fields'])){?>checked="checked"<?php }?>/><span><?php _e('Show on form','anonymous-post');?></span></label>
             </div>
              <div class="ap-included-single-wrap">
-              <input type="checkbox" name="form_required_fields[]" value="author_name" <?php if(in_array('author_name',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post');?></span>
+              <label><input type="checkbox" name="form_required_fields[]" value="author_name" <?php if(in_array('author_name',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post');?></span></label>
+            </div>
+             <div class="ap-included-single-wrap">
+                 <input type="text" name="form_required_message[author_name]" placeholder="<?php _e('Author Name Required Message','anonymous-post');?>" value="<?php echo isset($ap_settings['form_required_message']['author_name'])?esc_attr($ap_settings['form_required_message']['author_name']):'';?>"  class="ap-required-message"/>
             </div>
           </div><!--ap-fields-configurations-->
         </div><!--ap-each-config-wrapper-->
@@ -92,10 +107,13 @@
           </div><!--ap-fields-label-->
           <div class="ap-fields-configurations">
             <div class="ap-included-single-wrap">
-              <input type="checkbox" name="form_included_fields[]" value="author_url" <?php if(in_array('author_url',$ap_settings['form_included_fields'])){?>checked="checked"<?php }?>/><span><?php _e('Show on form','anonymous-post');?></span>
+              <label><input type="checkbox" name="form_included_fields[]" value="author_url" <?php if(in_array('author_url',$ap_settings['form_included_fields'])){?>checked="checked"<?php }?>/><span><?php _e('Show on form','anonymous-post');?></span></label>
             </div>
              <div class="ap-included-single-wrap">
-              <input type="checkbox" name="form_required_fields[]" value="author_url" <?php if(in_array('author_url',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post');?></span>
+              <label><input type="checkbox" name="form_required_fields[]" value="author_url" <?php if(in_array('author_url',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post');?></span></label>
+            </div>
+             <div class="ap-included-single-wrap">
+                 <input type="text" name="form_required_message[author_url]" placeholder="<?php _e('Author URL Required Message','anonymous-post');?>" value="<?php echo isset($ap_settings['form_required_message']['author_url'])?esc_attr($ap_settings['form_required_message']['author_url']):'';?>"  class="ap-required-message"/>
             </div>
           </div><!--ap-fields-configurations-->
         </div><!--ap-each-config-wrapper-->
@@ -108,10 +126,13 @@
           </div><!--ap-fields-label-->
           <div class="ap-fields-configurations">
             <div class="ap-included-single-wrap">
-              <input type="checkbox" name="form_included_fields[]" value="author_email" <?php if(in_array('author_email',$ap_settings['form_included_fields'])){?>checked="checked"<?php }?>/><span><?php _e('Show on form','anonymous-post');?></span>
+              <label><input type="checkbox" name="form_included_fields[]" value="author_email" <?php if(in_array('author_email',$ap_settings['form_included_fields'])){?>checked="checked"<?php }?>/><span><?php _e('Show on form','anonymous-post');?></span></label>
             </div>
              <div class="ap-included-single-wrap">
-              <input type="checkbox" name="form_required_fields[]" value="author_email" <?php if(in_array('author_email',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post');?></span>
+              <label><input type="checkbox" name="form_required_fields[]" value="author_email" <?php if(in_array('author_email',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post');?></span></label>
+            </div>
+             <div class="ap-included-single-wrap">
+                 <input type="text" name="form_required_message[author_email]" placeholder="<?php _e('Author Email Required Message','anonymous-post');?>" value="<?php echo isset($ap_settings['form_required_message']['author_email'])?esc_attr($ap_settings['form_required_message']['author_email']):'';?>"  class="ap-required-message"/>
             </div>
           </div><!--ap-fields-configurations-->
         </div><!--ap-each-config-wrapper-->
@@ -125,10 +146,13 @@
           </div><!--ap-fioelds-label-->
           <div class="ap-fields-configurations">
             <div class="ap-included-single-wrap">
-              <input type="checkbox" name="form_included_taxonomy[]" value="category"  <?php if(in_array('category', $ap_settings['form_included_taxonomy'])){?>checked="checked"<?php }?> /><span><?php _e('Show on form','anonymous-post');?></span>
+              <label><input type="checkbox" name="form_included_taxonomy[]" value="category"  <?php if(in_array('category', $ap_settings['form_included_taxonomy'])){?>checked="checked"<?php }?> /><span><?php _e('Show on form','anonymous-post');?></span></label>
             </div>
              <div class="ap-included-single-wrap">
-              <input type="checkbox" name="form_required_fields[]" value="category" <?php if(in_array('category',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post');?></span>
+              <label><input type="checkbox" name="form_required_fields[]" value="category" <?php if(in_array('category',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post');?></span></label>
+            </div>
+             <div class="ap-included-single-wrap">
+                 <input type="text" name="form_required_message[category]" placeholder="<?php _e('Post Category Required Message','anonymous-post');?>" value="<?php echo isset($ap_settings['form_required_message']['category'])?esc_attr($ap_settings['form_required_message']['category']):'';?>"  class="ap-required-message"/>
             </div>
           </div><!--ap-fields-configurations-->
         </div><!--ap-each-config-wrapper-->
@@ -139,10 +163,13 @@
           </div><!--ap-fioelds-label-->
           <div class="ap-fields-configurations">
             <div class="ap-included-single-wrap">
-              <input type="checkbox" name="form_included_taxonomy[]" value="post_tag"  <?php if(in_array('post_tag', $ap_settings['form_included_taxonomy'])){?>checked="checked"<?php }?> /><span><?php _e('Show on form','anonymous-post');?></span>
+              <label><input type="checkbox" name="form_included_taxonomy[]" value="post_tag"  <?php if(in_array('post_tag', $ap_settings['form_included_taxonomy'])){?>checked="checked"<?php }?> /><span><?php _e('Show on form','anonymous-post');?></span></label>
             </div>
              <div class="ap-included-single-wrap">
-              <input type="checkbox" name="form_required_fields[]" value="post_tag" <?php if(in_array('post_tag',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post');?></span>
+              <label><input type="checkbox" name="form_required_fields[]" value="post_tag" <?php if(in_array('post_tag',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post');?></span></label>
+            </div>
+             <div class="ap-included-single-wrap">
+                 <input type="text" name="form_required_message[post_tag]" placeholder="<?php _e('Post Tags Required Message','anonymous-post');?>" value="<?php echo isset($ap_settings['form_required_message']['post_tag'])?esc_attr($ap_settings['form_required_message']['post_tag']):'';?>"  class="ap-required-message"/>
             </div>
           </div><!--ap-fields-configurations-->
         </div><!--ap-each-config-wrapper-->
