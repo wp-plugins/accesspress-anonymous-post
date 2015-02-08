@@ -4,7 +4,7 @@ Tags: guest post, user post, anonymous post, frontend post, guest author, fronte
 Donate link: http://accesspressthemes.com/donation/
 Requires at least: 3.8
 Tested up to: 4.1
-Stable tag: 2.1.3
+Stable tag: 2.1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,7 +74,12 @@ If you're looking for Free WordPress guest post plugin, User Post Plugin, Anonym
 * <strong>Youtube channel link</strong>: https://www.youtube.com/watch?v=TjZNcVG3fDE
 * <strong>Facebook link</strong>: https://www.facebook.com/AccessPressThemes 
 
+= Available Langauges = 
+* English 
+* Serbian
 
+= Translators = 
+* Serbian - Ogi Djuraskovic(http://firstsiteguide.com/)
 
 For a easy installation guide checkout the Installation tab above.
 
@@ -117,6 +122,9 @@ Once you install the plugin , you can check some general documentation about how
 4. Frontend Form 
 
 == Changelog ==
+= 2.1.4 = 
+* Added Serbian Language
+
 = 2.1.3 =
 * Done some small updates in admin email message
 
