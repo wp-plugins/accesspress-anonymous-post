@@ -63,8 +63,11 @@ if($error_flag==0)
             $uploadedfile = $_FILES['ap_form_post_image'];
             $upload_overrides = array( 'test_form' => false );
             $movefile = wp_handle_upload( $uploadedfile, $upload_overrides );
-            //$this->print_array($movefile);
-            if ( $movefile ) {
+            if(isset($movefile['error'])){
+                $error->image = $movefile['error'];
+                goto end;
+            }
+            else {
                 include( ABSPATH . 'wp-admin/includes/image.php' );
                 $wp_filetype = $movefile['type'];
                 $filename = $movefile['file'];
@@ -77,12 +80,13 @@ if($error_flag==0)
                             'post_status' => 'inherit'
                                     );
             $attach_id = wp_insert_attachment( $attachment, $filename);
+            //var_dump($attach_id);die();
             $attach_data = wp_generate_attachment_metadata( $attach_id, $movefile['file'] );
              wp_update_attachment_metadata($attach_id,$attach_data);
                 
             }
         }
-        
+         
         $post_type = 'post'; 
         $publish_status = $ap_settings['publish_status'];
         if($ap_settings['login_check']==1 || is_user_logged_in())
@@ -173,5 +177,6 @@ if($error_flag==0)
          
     }
     }//if close
+    end:
     
 }
