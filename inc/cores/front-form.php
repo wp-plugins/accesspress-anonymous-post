@@ -192,8 +192,7 @@ $form .='<div class="ap-form-field-wrapper">
            <div class="ap-form-field ap-form-submit-wrapper">
              <input type="submit" class="ap-form-submit-button" value="'.$post_submit_label.'" name="ap_form_submit_btn"/>
            </div>
-         </div>
-         <div class="ap-plugin-link-wrapper"><span>'.__('Form created using: ','anonymous-post').'</span><a href="http://accesspressthemes.com/wordpress-plugins/access-press-anonymous-post/" target="_blank">'.__('AccessPress Anonymous Post','anonymous-post').'</a></div>';
+         </div>';
 $form .=$nonce_field;
 $redirect_url = ($ap_settings['redirect_url']=='')?$this->curPageURL():esc_url($ap_settings['redirect_url']);
 $form .='<input type="hidden" value="'.$redirect_url.'" name="redirect_url"/><input type="hidden" value="'.$ap_settings['captcha_settings'].'" class="ap-captcha-type"/>';
