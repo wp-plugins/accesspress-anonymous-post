@@ -50,7 +50,7 @@
           </div><!--ap-fioelds-label-->
           <div class="ap-fields-configurations">
             <div class="ap-included-single-wrap">
-              <label><input type="checkbox" name="form_included_fields[]" value="post_excerpt" <?php if(in_array('post_excerpt',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Show on form','anonymous-post');?></span></label>
+              <label><input type="checkbox" name="form_included_fields[]" value="post_excerpt" <?php if(in_array('post_excerpt',$ap_settings['form_included_fields'])){?>checked="checked"<?php }?>/><span><?php _e('Show on form','anonymous-post');?></span></label>
             </div>
             <div class="ap-included-single-wrap">
               <label><input type="checkbox" name="form_required_fields[]" value="post_excerpt" <?php if(in_array('post_excerpt',$form_required_fields)){?>checked="checked"<?php }?>/><span><?php _e('Required','anonymous-post');?></span></label>

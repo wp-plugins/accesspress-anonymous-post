@@ -6,6 +6,7 @@ $ap_form_post_title = sanitize_text_field($_POST['ap_form_post_title']);
 $ap_form_content = $_POST['ap_form_content_editor'];
 $error = new stdClass();
 $error_flag = 0;
+$image_error_flag = 0;
 //captcha server validation
 if($ap_settings['captcha_settings']=='1')
 {
@@ -47,25 +48,24 @@ if($error_flag==0)
             if(!($ext=='jpeg' || $ext=='png' || $ext=='jpg' || $ext=='gif' || $ext=='JPEG' || $ext=='PNG' || $ext=='JPG'))//if users upload invalid file type
             {
               $error->image = __('Invalid File Type','anonymous-post');
-              $error_flag = 1;    
+              $error_flag = 1; 
+              $image_error_flag = 1;   
             }
             
         }
     
     }
-    if($error_flag==0)
-    {
-        
-        //uploading image to media 
-        if(in_array('post_image',$ap_settings['form_included_fields']) && $_FILES['ap_form_post_image']['name']!='')
+    if(in_array('post_image',$ap_settings['form_included_fields']) && $_FILES['ap_form_post_image']['name']!='' && $image_error_flag!=1)
         {
             if ( ! function_exists( 'wp_handle_upload' ) ) require_once( ABSPATH . 'wp-admin/includes/file.php' );
             $uploadedfile = $_FILES['ap_form_post_image'];
             $upload_overrides = array( 'test_form' => false );
             $movefile = wp_handle_upload( $uploadedfile, $upload_overrides );
             if(isset($movefile['error'])){
+                $error_flag = 1; 
                 $error->image = $movefile['error'];
-                goto end;
+                
+                
             }
             else {
                 include( ABSPATH . 'wp-admin/includes/image.php' );
@@ -86,6 +86,11 @@ if($error_flag==0)
                 
             }
         }
+    if($error_flag==0)
+    {
+        
+        //uploading image to media 
+        
          
         $post_type = 'post'; 
         $publish_status = $ap_settings['publish_status'];
@@ -177,6 +182,6 @@ if($error_flag==0)
          
     }
     }//if close
-    end:
+    
     
 }
