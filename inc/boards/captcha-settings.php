@@ -3,7 +3,7 @@
   <div class="ap-tab-wrapper">
     <div class="ap-option-wrapper">
       <div class="ap-option-field">
-       <div class="ap-checkbox-form"> <input type="checkbox" name="captcha_settings" value="1" <?php if($ap_settings['captcha_settings']=='1'){?>checked="checked"<?php }?> class="ap-captcha-selector"/></div><span><?php _e('Show Mathmatical Captcha','anonymous-post')?></span>
+       <div class="ap-checkbox-form"><label class="ap-label-wrapper"><input type="checkbox" name="captcha_settings" value="1" <?php if($ap_settings['captcha_settings']=='1'){?>checked="checked"<?php }?> class="ap-captcha-selector"/><span><?php _e('Show Mathmatical Captcha','anonymous-post')?></span></label></div>
      </div>
    </div>
    <div class="captcha-fields ap-human-captcha-fields">
