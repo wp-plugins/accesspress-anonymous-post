@@ -68,7 +68,8 @@ if($error_flag==0)
                 
             }
             else {
-                include( ABSPATH . 'wp-admin/includes/image.php' );
+                if ( ! function_exists( 'wp_crop_image' ) ) require_once( ABSPATH . 'wp-admin/includes/image.php' );
+                //include( ABSPATH . 'wp-admin/includes/image.php' );
                 $wp_filetype = $movefile['type'];
                 $filename = $movefile['file'];
                 $wp_upload_dir = wp_upload_dir();

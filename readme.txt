@@ -3,8 +3,8 @@ Contributors: Access Keys
 Tags: guest post, user post, anonymous post, frontend post, guest author, frontend form post, frontend form, form post, guest blog, guest blogging, user submitted post, post, plugin, posts, shortcode
 Donate link: http://accesspressthemes.com/donation/
 Requires at least: 3.8
-Tested up to: 4.1
-Stable tag: 2.2.4
+Tested up to: 4.2
+Stable tag: 2.2.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -128,6 +128,9 @@ Once you install the plugin , you can check some general documentation about how
 4. Frontend Form 
 
 == Changelog ==
+= 2.2.5 = 
+* Fixed small bug regarding featured image
+
 = 2.2.4 = 
 * Updated explicit category selection on post submission. 
 
