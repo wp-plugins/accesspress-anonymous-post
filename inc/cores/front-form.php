@@ -83,7 +83,7 @@ if(in_array('post_image',$ap_settings['form_included_fields']))
     $form .='<div class="ap-form-field-wrapper">
                 <label>'.$post_image_label.'</label>
                 <div class="ap-form-field">
-                  <input type="file" name="ap_form_post_image" '.$required.' data-required-message="'.$post_image_required_message.'"/>
+                  <input type="file" name="ap_form_post_image" '.$required.' data-required-message="'.$post_image_required_message.'" data-extension-message="'.__('Please upload image file type only.','anonymous-post').'"/>
                 </div><!--ap-form-field-->';
         $form .= '<div class="ap-form-error-message">'.$error_image.'</div>';
     $form .='</div><!--ap-form-field-wrapper-->';

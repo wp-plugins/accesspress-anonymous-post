@@ -56,6 +56,26 @@ function check_form_submittable()
                     $(this).closest('.ap-form-field-wrapper').find('.ap-form-error-message').html(error_message);
                     
                 }
+                if($(this).attr('type') == 'file' && $(this).val()!=''){
+                    var filepath = $(this).val();
+                    var filepath_array = filepath.split('\\');
+                    var filename = filepath_array.pop();
+                    var filename_array = filename.split('.');
+                    var ext = filename_array.pop();
+                    if(ext=='jpg' || ext=='JPG' || ext=='jpeg' || ext=='JPEG' || ext == 'png' || ext =='PNG' || ext == 'gif' || ext == 'GIF'){
+                        
+                    }
+                    else
+                    {
+                         error_flag = 1;
+                        var error_message = $(this).attr('data-extension-message');
+                        if(error_message=='')
+                        {
+                            error_message = ap_form_required_message;
+                        }
+                        $(this).closest('.ap-form-field-wrapper').find('.ap-form-error-message').html(error_message);
+                    }
+                }
                 
                });
                if($('#ap-editor-type').val()=='rich' || $('#ap-editor-type').val()=='visual')
