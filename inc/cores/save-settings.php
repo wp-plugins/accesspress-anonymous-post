@@ -160,7 +160,7 @@ $ap_settings['redirect_url'] = $redirect_url;
 $ap_settings['math_captcha_error_message'] = $math_captcha_error_message;
 $ap_settings['math_captcha_label'] = $math_captcha_label;
 $update_option_check = update_option('ap_settings',$ap_settings);
-$_SESSION['ap_message'] = 'Settings Saved Successfully.'; 
+$_SESSION['ap_message'] = __('Settings Saved Successfully.','anonymous-post'); 
 wp_redirect(admin_url().'admin.php?page=anonymous-post');
 exit;
 

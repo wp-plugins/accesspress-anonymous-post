@@ -3,7 +3,7 @@ defined('ABSPATH') or die("No script kiddies please!");
 global $error;
 $ap_settings = $this->ap_settings;
 $ap_form_post_title = sanitize_text_field($_POST['ap_form_post_title']);
-$ap_form_content = $_POST['ap_form_content_editor'];
+$ap_form_content = wp_kses_post($_POST['ap_form_content_editor']);
 $error = new stdClass();
 $error_flag = 0;
 $image_error_flag = 0;
