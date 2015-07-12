@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: AccessPress Anonymous Post\n"
-"POT-Creation-Date: 2015-03-22 13:50+0545\n"
-"PO-Revision-Date: 2015-03-22 13:50+0545\n"
+"POT-Creation-Date: 2015-07-12 10:09+0545\n"
+"PO-Revision-Date: 2015-07-12 10:10+0545\n"
 "Last-Translator: \n"
 "Language-Team: Access Keys <support@accesspressthemes.com>\n"
 "Language: English\n"
@@ -13,11 +13,12 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
 
 #: ../accesspress-anonymous-post.php:104 ../inc/cores/front-form.php:11
-#: ../inc/cores/save-post.php:28 ../inc/cores/save-post.php:35
-#: ../inc/cores/save-post.php:36
+#: ../inc/cores/save-post.php:29 ../inc/cores/save-post.php:36
+#: ../inc/cores/save-post.php:37
 msgid "This field is required"
 msgstr ""
 
@@ -31,6 +32,15 @@ msgstr ""
 
 #: ../accesspress-anonymous-post.php:112
 msgid "AccessPress Anonymous Post"
+msgstr ""
+
+#: ../accesspress-anonymous-post.php:140 ../inc/cores/front-form.php:5
+msgid "Anonymous Post"
+msgstr ""
+
+#: ../accesspress-anonymous-post.php:144 ../accesspress-anonymous-post.php:378
+#: ../inc/cores/shortcode.php:22
+msgid "Please login to submit the post."
 msgstr ""
 
 #: ../accesspress-anonymous-post.php:295
@@ -55,10 +65,6 @@ msgstr ""
 
 #: ../accesspress-anonymous-post.php:321
 msgid "New Post Submission - via AccessPress Anonymous Post"
-msgstr ""
-
-#: ../accesspress-anonymous-post.php:378 ../inc/cores/shortcode.php:22
-msgid "Please login to submit the post."
 msgstr ""
 
 #: ../accesspress-anonymous-post.php:407
@@ -357,12 +363,12 @@ msgstr ""
 msgid "Message displayed after successful post submission."
 msgstr ""
 
-#: ../inc/cores/front-form.php:5
-msgid "Anonymous Post"
-msgstr ""
-
 #: ../inc/cores/front-form.php:9 ../inc/cores/front-form.php:190
 msgid "Submit Post"
+msgstr ""
+
+#: ../inc/cores/front-form.php:86
+msgid "Please upload image file type only."
 msgstr ""
 
 #: ../inc/cores/front-form.php:119
@@ -377,16 +383,20 @@ msgstr ""
 msgid "Enter Sum"
 msgstr ""
 
-#: ../inc/cores/save-post.php:19
+#: ../inc/cores/save-post.php:20
 msgid "The entered sum is not correct"
 msgstr ""
 
-#: ../inc/cores/save-post.php:49
+#: ../inc/cores/save-post.php:50
 msgid "Invalid File Type"
 msgstr ""
 
-#: ../inc/cores/save-post.php:173
+#: ../inc/cores/save-post.php:179
 msgid "Hi there, Thank you for submitting a post."
+msgstr ""
+
+#: ../inc/cores/save-settings.php:163
+msgid "Settings Saved Successfully."
 msgstr ""
 
 #: ../inc/cores/shortcode.php:30
