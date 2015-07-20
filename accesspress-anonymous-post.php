@@ -4,7 +4,7 @@ defined('ABSPATH') or die("No script kiddies please!");
  * Plugin Name:AccessPress Anonymous Post
  * Plugin URI: http://accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post/
  * Description: A plugin that provides the ability to publish post from frontend with or without login anonymously using a simple html5 form from anywhere of the site with the help of shortcode and various backend settings.
- * Version:2.3.4
+ * Version:2.3.5
  * Author:AccessPress Themes
  * Author URI:http://accesspressthemes.com/
  * Text Domain: anonymous-post
@@ -31,7 +31,7 @@ defined('ABSPATH') or die("No script kiddies please!");
  }
  if(!defined('AP_VERSION'))
  {
-    define('AP_VERSION','2.3.4');
+    define('AP_VERSION','2.3.5');
  }
   
  if(!class_exists('AP_Class'))
@@ -299,16 +299,13 @@ defined('ABSPATH') or die("No script kiddies please!");
             $post_author_name = get_post_meta($post_id,'ap_author_name',true);
             $post_author_email = get_post_meta($post_id,'ap_author_email',true);
             $post_author_url = get_post_meta($post_id,'ap_author_url',true);
-            if($post_author_name!='')
-            {
+            if($post_author_name!=''){
                 $message .= 'Post Author Name: '.$post_author_name.'<br/><br/>';
             }
-            if($post_author_email!='')
-            {
+            if($post_author_email!=''){
                 $message .= 'Post Author Email: '.$post_author_email.'<br/><br/>';
             }
-            if($post_author_url!='')
-            {
+            if($post_author_url!=''){
                 $message .= 'Post Author URL: '.$post_author_url.'<br/><br/>';
             }
       
