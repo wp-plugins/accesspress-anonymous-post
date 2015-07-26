@@ -128,6 +128,9 @@ Once you install the plugin , you can check some general documentation about how
 4. Frontend Form 
 
 == Changelog ==
+= 2.3.6 = 
+* Added some styles to prevent css conflict 
+
 = 2.3.5 = 
 * Fixed small bug regarding author details 
 
