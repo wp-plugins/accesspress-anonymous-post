@@ -10,7 +10,10 @@
 		<div class="upgrade"><a href="http://accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post-premium/" target="_blank">Upgrade now! </a></div>
 	
 		<h3 class="feature-title">Pro features </h3>
-        <img src="<?php echo AP_IMAGE_DIR.'/anonymous-post-pro.jpg';?>" width="100%"/>
+        <div class="ap-promo-img">
+            <img src="<?php echo AP_IMAGE_DIR.'/sales-image-1.jpg';?>" style="text-align: center;"/>
+            <img src="<?php echo AP_IMAGE_DIR.'/sales-image-2.jpg';?>" style="text-align: center;"/>
+        </div>
 		<!--<ul class="features">
 			<li>Custom Post Types and Taxonomy</li>
 			<li>Add more notification emails upto 3</li>

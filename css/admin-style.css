@@ -287,3 +287,7 @@ margin-left:-45px
 }
 
 .ap-label-wrapper{width:100% !important}
+.ap-promo-img {
+    width: 80%;
+    margin: 0 auto;
+}
