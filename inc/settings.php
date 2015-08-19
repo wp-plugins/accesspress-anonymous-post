@@ -109,10 +109,10 @@
    </div><!--optionsframework-->
    <div class="ap-upgrade-block">
      <a href="http://codecanyon.net/item/accesspress-anonymous-post-pro/9160446?ref=AccessKeys" target="_blank" class="ap-upgrade-first"><img src="<?php echo AP_IMAGE_DIR.'/anonymous-pro-upgrade-1.jpg'?>"/></a>
-     <a href="http://accesspressthemes.com/demo/wordpress-plugins/accesspress-anonymous-post-pro/" target="_blank"><img src="<?php echo AP_IMAGE_DIR.'/demo-btn.jpg'?>"/></a>
+     <a href="http://demo.accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post-pro/" target="_blank"><img src="<?php echo AP_IMAGE_DIR.'/demo-btn.jpg'?>"/></a>
      <a href="http://codecanyon.net/item/accesspress-anonymous-post-pro/9160446?ref=AccessKeys" target="_blank" class="ap-upgrade-btn"><img src="<?php echo AP_IMAGE_DIR.'/upgrade-btn.jpg'?>"/></a>
-     <a href="http://accesspressthemes.com/demo/wordpress-plugins/accesspress-anonymous-post-pro/" target="_blank" class="ap-upgrade-first"><img src="<?php echo AP_IMAGE_DIR.'/anonymous-pro-upgrade-2.jpg'?>"/></a>
-     <a href="http://accesspressthemes.com/demo/wordpress-plugins/accesspress-anonymous-post-pro/" target="_blank"><img src="<?php echo AP_IMAGE_DIR.'/demo-btn.jpg'?>"/></a>
+     <a href="http://demo.accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post-pro/" target="_blank" class="ap-upgrade-first"><img src="<?php echo AP_IMAGE_DIR.'/anonymous-pro-upgrade-2.jpg'?>"/></a>
+     <a href="http://demo.accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post-pro/" target="_blank"><img src="<?php echo AP_IMAGE_DIR.'/demo-btn.jpg'?>"/></a>
      <a href="http://codecanyon.net/item/accesspress-anonymous-post-pro/9160446?ref=AccessKeys" target="_blank"  class="ap-upgrade-btn"><img src="<?php echo AP_IMAGE_DIR.'/upgrade-btn.jpg'?>"/></a>
      <div class="ap-enquiry-block">
       <p>If you have any questions regarding pro version, please contact us from <a href="https://accesspressthemes.com/contact/" target="_blank">here</a></p>
