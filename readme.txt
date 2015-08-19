@@ -61,7 +61,7 @@ If you're looking for Free WordPress guest post plugin, User Post Plugin, Anonym
 = Premium Upgrades =
 * For  <strong>Free</strong> and <strong>Premium</strong> features comparision please go [here](https://accesspressthemes.com/comparision/accesspress-anonymous-post-accesspress-anonymous-pro-comparision/).
 * For Premium upgrades please go [here](http://accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post-premium/).
-* See PRO version features here: http://wpfrontendposting.com/[http://wpfrontendposting.com/]
+* See PRO version features here: [http://wpfrontendposting.com/](http://wpfrontendposting.com/)
 
 
 = Easy and detailed video tutorial: = 
