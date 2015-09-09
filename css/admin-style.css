@@ -188,9 +188,7 @@
 .seperator{
     padding: 10px;
 }
-.captcha-fields .ap-option-wrapper > label {
-    width: 250px;
-}
+
 .captcha-fields .ap-option-field{
     display: inline-block;
     width: calc(100% - 255px);
@@ -290,4 +288,11 @@ margin-left:-45px
 .ap-promo-img {
     width: 80%;
     margin: 0 auto;
+}
+.ap-captcha-note {
+    background-color: #FFFBCC;
+    padding: 10px;
+    font-style: italic;
+    line-height: 1.5;
+    box-shadow: 0 0 2px;
 }

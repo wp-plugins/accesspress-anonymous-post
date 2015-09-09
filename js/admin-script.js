@@ -13,6 +13,18 @@
         $('#'+board_id).show();
        });
        
+       /**
+        * Captcha Type change
+        */
+       $('.ap-captcha-type').change(function(){
+           var value = $(this).val();
+           if(value=='google'){
+               $('.ap-google-captcha-fields').show();
+           }else{
+               $('.ap-google-captcha-fields').hide();
+           }
+       });
+       
 	   
 	});
 }(jQuery));

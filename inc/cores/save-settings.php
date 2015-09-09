@@ -157,8 +157,11 @@ foreach($taxonomies_array as $tax)
 $ap_settings['captcha_settings'] = (isset($captcha_settings))?1:0;
 $ap_settings['plugin_styles'] = (isset($plugin_styles))?1:0;
 $ap_settings['redirect_url'] = $redirect_url;
+$ap_settings['captcha_type'] = $captcha_type;
 $ap_settings['math_captcha_error_message'] = $math_captcha_error_message;
 $ap_settings['math_captcha_label'] = $math_captcha_label;
+$ap_settings['google_captcha_sitekey'] = $google_captcha_sitekey;
+$ap_settings['google_captcha_secretkey'] = $google_captcha_secretkey;
 $update_option_check = update_option('ap_settings',$ap_settings);
 $_SESSION['ap_message'] = __('Settings Saved Successfully.','anonymous-post'); 
 wp_redirect(admin_url().'admin.php?page=anonymous-post');
