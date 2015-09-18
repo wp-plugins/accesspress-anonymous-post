@@ -29,7 +29,7 @@ If you're looking for Free WordPress guest post plugin, User Post Plugin, Anonym
 * <strong>Anyone can post from anywhere in the site</strong>
 * <strong>Category selection</strong>
 * <strong>Add featured image to the post. More than one image and other media items can be added to the post if logged in.</strong>
-* <strong>Captcha for secure posting which can be enabled and disabled from plugin settings page</strong>
+* <strong>Mathematical Captcha and Google Captcha for secure posting which can be enabled and disabled from plugin settings page</strong>
 * <strong>Use short code to display the submission form anywhere</strong>
 * <strong>Post submissions may include title, tags, category, author, URL, post image</strong>
 * <strong>HTML5 submission form with streamlined CSS styles</strong>
