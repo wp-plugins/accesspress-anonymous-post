@@ -1,5 +1,5 @@
 <div class="ap-tabs-board" id="board-upgrade-settings" style="display: none;">
-<h2><?php _e('Upgrade','anonymous-post');?></h2>
+<h2><?php _e('Upgrade','accesspress-anonymous-post');?></h2>
 	<div class="ap-tab-wrapper">
 		<p><strong>For more features upgrade to PRO version. </strong><br />
 		<strong>Regular Licence:</strong> Use, by you or one client, in a single end product which end users are not charged for. The total price includes the item price and a buyer fee. <br />

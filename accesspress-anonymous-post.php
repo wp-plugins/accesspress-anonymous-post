@@ -4,10 +4,10 @@ defined('ABSPATH') or die("No script kiddies please!");
  * Plugin Name:AccessPress Anonymous Post
  * Plugin URI: http://accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post/
  * Description: A plugin that provides the ability to publish post from frontend with or without login anonymously using a simple html5 form from anywhere of the site with the help of shortcode and various backend settings.
- * Version:2.4.3
+ * Version:2.4.4
  * Author:AccessPress Themes
  * Author URI:http://accesspressthemes.com/
- * Text Domain: anonymous-post
+ * Text Domain: accesspress-anonymous-post
  * Domain Path: /languages/
  * Network: false
  * License:GPLv2 or later
@@ -31,7 +31,7 @@ defined('ABSPATH') or die("No script kiddies please!");
  }
  if(!defined('AP_VERSION'))
  {
-    define('AP_VERSION','2.4.2');
+    define('AP_VERSION','2.4.4');
  }
   
  if(!class_exists('AP_Class'))
@@ -66,7 +66,7 @@ defined('ABSPATH') or die("No script kiddies please!");
         //load the text domain for language translation
         function plugin_text_domain()
         {
-            load_plugin_textdomain('anonymous-post', false, basename( dirname( __FILE__ ) ) . '/languages/' );
+            load_plugin_textdomain('accesspress-anonymous-post', false, basename( dirname( __FILE__ ) ) . '/languages/' );
         }
         
         //grabes the posted form data and save post accordingly
@@ -101,15 +101,15 @@ defined('ABSPATH') or die("No script kiddies please!");
               wp_enqueue_style('ap-front-styles',AP_CSS_DIR.'/frontend-style.css',false,AP_VERSION);    
             }
             wp_enqueue_script('ap-frontend-js',AP_JS_DIR.'/frontend.js',array('jquery'),AP_VERSION,true);
-            wp_localize_script('ap-frontend-js','ap_form_required_message',__('This field is required','anonymous-post'));
-            wp_localize_script('ap-frontend-js','ap_captcha_error_message',__('Sum is not correct.','anonymous-post'));
+            wp_localize_script('ap-frontend-js','ap_form_required_message',__('This field is required','accesspress-anonymous-post'));
+            wp_localize_script('ap-frontend-js','ap_captcha_error_message',__('Sum is not correct.','accesspress-anonymous-post'));
             
         }
         
         //Adds admin menu 
         function add_ap_menu()
         {
-            add_menu_page(__('AccessPress Anonymoust Post Settings','anonymous-post'),__('AccessPress Anonymous Post','anonymous-post'),'manage_options','anonymous-post',array($this,'ap_settings'),AP_IMAGE_DIR.'/ap-icon.png');
+            add_menu_page(__('AccessPress Anonymoust Post Settings','accesspress-anonymous-post'),__('AccessPress Anonymous Post','accesspress-anonymous-post'),'manage_options','anonymous-post',array($this,'ap_settings'),AP_IMAGE_DIR.'/ap-icon.png');
         }
         
         //returns the ID of the first user
@@ -137,11 +137,11 @@ defined('ABSPATH') or die("No script kiddies please!");
         function load_default_settings()
         {
             $ap_settings = array();//array for saving all the plugin's settings in single array
-            $ap_settings['form_title'] = __('Anonymous Post','anonymous-post');
+            $ap_settings['form_title'] = __('Anonymous Post','accesspress-anonymous-post');
             $ap_settings['publish_status'] = 'draft';
             $ap_settings['admin_notification'] = 1;
             $ap_settings['login_check'] = 0;
-            $ap_settings['login_message'] = __('Please login to submit the post.','anonymous-post');
+            $ap_settings['login_message'] = __('Please login to submit the post.','accesspress-anonymous-post');
             $ap_settings['login_link_text'] = '';
             $ap_settings['post_author'] = $this->get_first_user_id();
             $ap_settings['plugin_styles'] = 1;
@@ -292,8 +292,8 @@ defined('ABSPATH') or die("No script kiddies please!");
           	$blogname = get_option('blogname');
 		    $email = get_option('admin_email');
             $headers = "MIME-Version: 1.0\r\n" . "From: ".$blogname." "."<".$email.">\n" . "Content-Type: text/HTML; charset=\"" . get_option('blog_charset') . "\"\r\n";
-            $message = __('Hello there,','anonymous-post').'<br/><br/>'. 
-                        __('A new post has been submitted via AccessPress Anonymous Post plugin in ','anonymous-post').$blogname.' site.'.__(' Please find details below:','anonymous-post').'<br/><br/>'.
+            $message = __('Hello there,','accesspress-anonymous-post').'<br/><br/>'. 
+                        __('A new post has been submitted via AccessPress Anonymous Post plugin in ','accesspress-anonymous-post').$blogname.' site.'.__(' Please find details below:','accesspress-anonymous-post').'<br/><br/>'.
                         
                         'Post title: '.$post_title.'<br/><br/>';
             $post_author_name = get_post_meta($post_id,'ap_author_name',true);
@@ -311,11 +311,11 @@ defined('ABSPATH') or die("No script kiddies please!");
       
                         
             $message .= '____<br/><br/>
-                        '.__('To take action (approve/reject)- please go here:','anonymous-post').'<br/>'
+                        '.__('To take action (approve/reject)- please go here:','accesspress-anonymous-post').'<br/>'
                         .admin_url().'post.php?post='.$post_id.'&action=edit <br/><br/>
                         
-                        '.__('Thank You','anonymous-post');
-            $subject = __('New Post Submission - via AccessPress Anonymous Post','anonymous-post');
+                        '.__('Thank You','accesspress-anonymous-post');
+            $subject = __('New Post Submission - via AccessPress Anonymous Post','accesspress-anonymous-post');
             wp_mail($email,$subject,$message,$headers);
                         
                         
@@ -379,7 +379,7 @@ defined('ABSPATH') or die("No script kiddies please!");
             $ap_settings['publish_status'] = 'draft';
             $ap_settings['admin_notification'] = 1;
             $ap_settings['login_check'] = 0;
-            $ap_settings['login_message'] = __('Please login to submit the post.','anonymous-post');
+            $ap_settings['login_message'] = __('Please login to submit the post.','accesspress-anonymous-post');
             $ap_settings['login_link_text'] = '';
             $ap_settings['post_author'] = $this->get_first_user_id();
             $ap_settings['plugin_styles'] = 1;
@@ -408,7 +408,7 @@ defined('ABSPATH') or die("No script kiddies please!");
             $ap_settings['admin_email_list'] = array();
             $ap_settings['math_captcha_error_message'] = '';
             $restore = update_option('ap_settings',$ap_settings);
-            $_SESSION['ap_message'] = __('Default Settings Restored Successfully.','anonymous-post');
+            $_SESSION['ap_message'] = __('Default Settings Restored Successfully.','accesspress-anonymous-post');
             wp_redirect(admin_url().'admin.php?page=anonymous-post');
             exit;
                 

@@ -19,7 +19,7 @@ else
         $current_page = urlencode($this->curPageURL());
         if($ap_settings['login_message']=='')
         {
-            $login_message = __('Please login to submit the post.','anonymous-post');
+            $login_message = __('Please login to submit the post.','accesspress-anonymous-post');
         }
         else
         {
@@ -27,7 +27,7 @@ else
         }
         if($ap_settings['login_link_text']=='')
         {
-            $login_link_text = __('Login','anonymous-post');
+            $login_link_text = __('Login','accesspress-anonymous-post');
         }
         else
         {

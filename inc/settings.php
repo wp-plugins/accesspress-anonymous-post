@@ -12,11 +12,11 @@
   <div class="ap-settings-wrapper wrap">
     <div class="ap-settings-header">
       <div class="ap-logo">
-        <img src="<?php echo AP_IMAGE_DIR;?>/logo.png" alt="<?php esc_attr_e('AccessPress Anonymous Post','anonymous-post'); ?>" />
+        <img src="<?php echo AP_IMAGE_DIR;?>/logo.png" alt="<?php esc_attr_e('AccessPress Anonymous Post','accesspress-anonymous-post'); ?>" />
       </div>
 
       <div class="ak-socials">
-        <p><?php _e('Follow us for new updates','anonymous-post') ?></p>
+        <p><?php _e('Follow us for new updates','accesspress-anonymous-post') ?></p>
         <div class="ap-social-bttns">
 
           <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FAccessPress-Themes%2F1396595907277967&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=35&amp;appId=1411139805828592" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:20px; width:50px " allowTransparency="true"></iframe>
@@ -27,7 +27,7 @@
         </div>
       </div>
 
-      <div class="ap-title"><?php _e('AccessPress Anonymous Post Settings','anonymous-post');?></div>
+      <div class="ap-title"><?php _e('AccessPress Anonymous Post Settings','accesspress-anonymous-post');?></div>
     </div>
 
     <?php if(isset($_SESSION['ap_message'])){?>
@@ -38,12 +38,12 @@
     
 
    <ul class="ap-settings-tabs">
-    <li><a href="javascript:void(0)" id="general-settings" class="ap-tabs-trigger ap-active-tab"><?php _e('General Settings','anonymous-post')?></a></li>
-    <li><a href="javascript:void(0)" id="form-settings" class="ap-tabs-trigger"><?php _e('Form Settings','anonymous-post');?></a></li>
-    <li><a href="javascript:void(0)" id="captcha-settings" class="ap-tabs-trigger"><?php _e('Captcha Settings','anonymous-post');?></a></li>
-    <li><a href="javascript:void(0)" id="how_to_use-settings" class="ap-tabs-trigger"><?php _e('How to use','anonymous-post');?></a></li>
-    <li><a href="javascript:void(0)" id="upgrade-settings" class="ap-tabs-trigger"><?php _e('Upgrade','anonymous-post');?></a></li>
-    <li><a href="javascript:void(0)" id="about-settings" class="ap-tabs-trigger"><?php _e('About','anonymous-post');?></a></li>
+    <li><a href="javascript:void(0)" id="general-settings" class="ap-tabs-trigger ap-active-tab"><?php _e('General Settings','accesspress-anonymous-post')?></a></li>
+    <li><a href="javascript:void(0)" id="form-settings" class="ap-tabs-trigger"><?php _e('Form Settings','accesspress-anonymous-post');?></a></li>
+    <li><a href="javascript:void(0)" id="captcha-settings" class="ap-tabs-trigger"><?php _e('Captcha Settings','accesspress-anonymous-post');?></a></li>
+    <li><a href="javascript:void(0)" id="how_to_use-settings" class="ap-tabs-trigger"><?php _e('How to use','accesspress-anonymous-post');?></a></li>
+    <li><a href="javascript:void(0)" id="upgrade-settings" class="ap-tabs-trigger"><?php _e('Upgrade','accesspress-anonymous-post');?></a></li>
+    <li><a href="javascript:void(0)" id="about-settings" class="ap-tabs-trigger"><?php _e('About','accesspress-anonymous-post');?></a></li>
   </ul>
   
   <div class="metabox-holder">
@@ -103,7 +103,7 @@
          <?php 
          $nonce = wp_create_nonce( 'aps-restore-default-nonce' );
          ?>
-         <a href="<?php echo admin_url().'admin-post.php?action=ap_restore_default&_wpnonce='.$nonce;?>" onclick="return confirm('<?php _e('Are you sure you want to restore default settings?','anonymous-post');?>')"><input type="button" value="Restore Default Settings" class="ap-reset-button"/></a>
+         <a href="<?php echo admin_url().'admin-post.php?action=ap_restore_default&_wpnonce='.$nonce;?>" onclick="return confirm('<?php _e('Are you sure you want to restore default settings?','accesspress-anonymous-post');?>')"><input type="button" value="Restore Default Settings" class="ap-reset-button"/></a>
        </div>
      </form>   
    </div><!--optionsframework-->

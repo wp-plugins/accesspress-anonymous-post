@@ -3,13 +3,13 @@
 defined( 'ABSPATH' ) or die( "No script kiddies please!" );
 
 $ap_settings = $this->ap_settings;
-$form_title = ($ap_settings['form_title'] == '') ? __( 'Anonymous Post', 'anonymous-post' ) : esc_attr( $ap_settings['form_title'] );
-$post_title_label = ($ap_settings['post_title_label'] == '') ? __( 'Post Title', 'anonymous-post' ) : esc_attr( $ap_settings['post_title_label'] );
-$post_content_label = ($ap_settings['post_content_label'] == '') ? __( 'Post Content', 'anonymous-post' ) : esc_attr( $ap_settings['post_content_label'] );
-$post_image_label = ($ap_settings['post_image_label']) == '' ? __( 'Post Image', 'anonymous-post' ) : esc_attr( $ap_settings['post_image_label'] );
-$post_submit_label = ($ap_settings['post_submit_label'] == '') ? __( 'Submit Post', 'anonymous-post' ) : esc_attr( $ap_settings['post_submit_label'] );
+$form_title = esc_attr( $ap_settings['form_title'] );
+$post_title_label = ($ap_settings['post_title_label'] == '') ? __( 'Post Title', 'accesspress-anonymous-post' ) : esc_attr( $ap_settings['post_title_label'] );
+$post_content_label = ($ap_settings['post_content_label'] == '') ? __( 'Post Content', 'accesspress-anonymous-post' ) : esc_attr( $ap_settings['post_content_label'] );
+$post_image_label = ($ap_settings['post_image_label']) == '' ? __( 'Post Image', 'accesspress-anonymous-post' ) : esc_attr( $ap_settings['post_image_label'] );
+$post_submit_label = ($ap_settings['post_submit_label'] == '') ? __( 'Submit Post', 'accesspress-anonymous-post' ) : esc_attr( $ap_settings['post_submit_label'] );
 $form_required_fields = isset( $ap_settings['form_required_fields'] ) ? $ap_settings['form_required_fields'] : array();
-$required_message = __( 'This field is required', 'anonymous-post' );
+$required_message = __( 'This field is required', 'accesspress-anonymous-post' );
 $post_title_required_message = isset( $ap_settings['form_required_message']['post_title'] ) ? esc_attr( $ap_settings['form_required_message']['post_title'] ) : $required_message;
 $post_content_required_message = isset( $ap_settings['form_required_message']['post_content'] ) ? esc_attr( $ap_settings['form_required_message']['post_content'] ) : $required_message;
 $post_excerpt_required_message = isset( $ap_settings['form_required_message']['post_excerpt'] ) ? esc_attr( $ap_settings['form_required_message']['post_excerpt'] ) : $required_message;
@@ -60,7 +60,7 @@ $form .= '</div><!--ap-form-field-wrapper-->';
 
 //for including post excerpt
 if ( in_array( 'post_excerpt', $ap_settings['form_included_fields'] ) ) {
-	$post_excerpt_label = ($ap_settings['post_excerpt_label'] == '') ? __( 'Post Excerpt', 'anonymous-post' ) : esc_attr( $ap_settings['post_excerpt_label'] );
+	$post_excerpt_label = ($ap_settings['post_excerpt_label'] == '') ? __( 'Post Excerpt', 'accesspress-anonymous-post' ) : esc_attr( $ap_settings['post_excerpt_label'] );
 	$required = in_array( 'post_excerpt', $form_required_fields ) ? 'class="ap-required-field"' : '';
 	$form .='<div class="ap-form-field-wrapper">
                 <label>' . $post_excerpt_label . '</label>
@@ -77,7 +77,7 @@ if ( in_array( 'post_image', $ap_settings['form_included_fields'] ) ) {
 	$form .='<div class="ap-form-field-wrapper">
                 <label>' . $post_image_label . '</label>
                 <div class="ap-form-field">
-                  <input type="file" name="ap_form_post_image" ' . $required . ' data-required-message="' . $post_image_required_message . '" data-extension-message="' . __( 'Please upload image file type only.', 'anonymous-post' ) . '"/>
+                  <input type="file" name="ap_form_post_image" ' . $required . ' data-required-message="' . $post_image_required_message . '" data-extension-message="' . __( 'Please upload image file type only.', 'accesspress-anonymous-post' ) . '"/>
                 </div><!--ap-form-field-->';
 	$form .= '<div class="ap-form-error-message">' . $error_image . '</div>';
 	$form .='</div><!--ap-form-field-wrapper-->';
@@ -105,7 +105,7 @@ if ( !empty( $ap_settings['form_included_taxonomy'] ) ) {
         <div class="ap-form-error-message"></div>
                 </div><!--ap-form-field-wrapper-->';
 		} else {
-			$tag_label = ($ap_settings['post_tag_label'] == '') ? __( 'Tags (Use comma to add multiple tags)', 'anonymous-post' ) : esc_attr( $ap_settings['post_tag_label'] );
+			$tag_label = ($ap_settings['post_tag_label'] == '') ? __( 'Tags (Use comma to add multiple tags)', 'accesspress-anonymous-post' ) : esc_attr( $ap_settings['post_tag_label'] );
 			$required = in_array( 'post_tag', $form_required_fields ) ? 'class="ap-required-field"' : '';
 			$form .='<div class="ap-form-field-wrapper">
                         <label>' . $tag_label . '</label>
@@ -118,7 +118,7 @@ if ( !empty( $ap_settings['form_included_taxonomy'] ) ) {
 	}
 }
 if ( in_array( 'author_name', $ap_settings['form_included_fields'] ) ) {
-	$author_name_label = ($ap_settings['author_name_label'] == '') ? __( 'Author Name', 'anonymous-post' ) : esc_attr( $ap_settings['author_name_label'] );
+	$author_name_label = ($ap_settings['author_name_label'] == '') ? __( 'Author Name', 'accesspress-anonymous-post' ) : esc_attr( $ap_settings['author_name_label'] );
 	$required = in_array( 'author_name', $form_required_fields ) ? 'class="ap-required-field"' : '';
 	$form .='<div class="ap-form-field-wrapper">
                 <label>' . $author_name_label . '</label>
@@ -129,7 +129,7 @@ if ( in_array( 'author_name', $ap_settings['form_included_fields'] ) ) {
              </div><!--ap-form-field-wrapper-->';
 }
 if ( in_array( 'author_url', $ap_settings['form_included_fields'] ) ) {
-	$author_url_label = ($ap_settings['author_url_label'] == '') ? __( 'Author URL', 'anonymous-post' ) : esc_attr( $ap_settings['author_url_label'] );
+	$author_url_label = ($ap_settings['author_url_label'] == '') ? __( 'Author URL', 'accesspress-anonymous-post' ) : esc_attr( $ap_settings['author_url_label'] );
 	$required = in_array( 'author_url', $form_required_fields ) ? 'class="ap-required-field"' : '';
 	$form .='<div class="ap-form-field-wrapper">
                 <label>' . $author_url_label . '</label>
@@ -140,7 +140,7 @@ if ( in_array( 'author_url', $ap_settings['form_included_fields'] ) ) {
              </div><!--ap-form-field-wrapper-->';
 }
 if ( in_array( 'author_email', $ap_settings['form_included_fields'] ) ) {
-	$author_email_label = ($ap_settings['author_email_label'] == '') ? __( 'Author Email', 'anonymous-post' ) : esc_attr( $ap_settings['author_email_label'] );
+	$author_email_label = ($ap_settings['author_email_label'] == '') ? __( 'Author Email', 'accesspress-anonymous-post' ) : esc_attr( $ap_settings['author_email_label'] );
 	$required = in_array( 'author_email', $form_required_fields ) ? 'class="ap-required-field"' : '';
 	$form .='<div class="ap-form-field-wrapper">
                 <label>' . $author_email_label . '</label>
@@ -156,13 +156,13 @@ if ( $ap_settings['captcha_settings'] == 1 ) {
 	$captcha_error_msg = (isset( $error->captcha )) ? $error->captcha : '';
 	$number1 = rand( 1, 9 );
 	$number2 = rand( 1, 9 );
-	$captcha_label = ($ap_settings['math_captcha_label'] == '') ? __( 'Human Check', 'anonymous-post' ) : esc_attr( $ap_settings['math_captcha_label'] );
+	$captcha_label = ($ap_settings['math_captcha_label'] == '') ? __( 'Human Check', 'accesspress-anonymous-post' ) : esc_attr( $ap_settings['math_captcha_label'] );
 	$captcha_type = isset( $ap_settings['captcha_type'] ) ? $ap_settings['captcha_type'] : 'math';
 	if ( $captcha_type == 'math' ) {
 		$form .='<div class="ap-form-field-wrapper">
               <label>' . $captcha_label . '</label>
               <div class="ap-form-field math-captcha">
-                <span class="ap-captcha-first-num">' . $number1 . '</span>+<span class="ap-captcha-second-num">' . $number2 . '</span>=<input type="text" name="ap_captcha_result" id="ap-captcha-result" placeholder="' . __( 'Enter Sum', 'anonymous-post' ) . '" class="ap-required-field" data-required-message="' . $required_message . '">
+                <span class="ap-captcha-first-num">' . $number1 . '</span>+<span class="ap-captcha-second-num">' . $number2 . '</span>=<input type="text" name="ap_captcha_result" id="ap-captcha-result" placeholder="' . __( 'Enter Sum', 'accesspress-anonymous-post' ) . '" class="ap-required-field" data-required-message="' . $required_message . '">
                 <input type="hidden" name="ap_num1" value="' . $number1 . '"/>
                 <input type="hidden" name="ap_num2" value="' . $number2 . '"/>
               </div>
@@ -182,7 +182,7 @@ if ( $ap_settings['captcha_settings'] == 1 ) {
 }
 
 
-$post_submit_label = ($ap_settings['post_submit_label'] == '') ? __( 'Submit Post', 'anonymous-post' ) : esc_attr( $ap_settings['post_submit_label'] );
+$post_submit_label = ($ap_settings['post_submit_label'] == '') ? __( 'Submit Post', 'accesspress-anonymous-post' ) : esc_attr( $ap_settings['post_submit_label'] );
 $form .='<div class="ap-form-field-wrapper">
            <div class="ap-form-field ap-form-submit-wrapper">
              <input type="submit" class="ap-form-submit-button" value="' . $post_submit_label . '" name="ap_form_submit_btn"/>

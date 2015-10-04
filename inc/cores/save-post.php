@@ -19,7 +19,7 @@ if ( $ap_settings['captcha_settings'] == '1' ) {
 		$actual_sum = $number1 + $number2;
 		if ( $actual_sum != $result ) {
 			$error_flag = 1;
-			$error_message = ($ap_settings['math_captcha_error_message'] != '') ? esc_attr( $ap_settings['math_captcha_error_message'] ) : __( 'The entered sum is not correct', 'anonymous-post' );
+			$error_message = ($ap_settings['math_captcha_error_message'] != '') ? esc_attr( $ap_settings['math_captcha_error_message'] ) : __( 'The entered sum is not correct', 'accesspress-anonymous-post' );
 			$error->captcha = $error_message;
 		}
 	} else {
@@ -28,7 +28,7 @@ if ( $ap_settings['captcha_settings'] == '1' ) {
 		/* Check if captcha is filled */
 		if ( !$captcha ) {
 			$error_flag = 1;
-			$error_message = ($ap_settings['math_captcha_error_message'] != '') ? esc_attr( $ap_settings['math_captcha_error_message'] ) : __( 'Please verify that you are a human.', 'anonymous-post' );
+			$error_message = ($ap_settings['math_captcha_error_message'] != '') ? esc_attr( $ap_settings['math_captcha_error_message'] ) : __( 'Please verify that you are a human.', 'accesspress-anonymous-post' );
 			$error->captcha = $error_message;
 		} else {
 			$secret_key = $ap_settings['google_captcha_secretkey'];
@@ -36,7 +36,7 @@ if ( $ap_settings['captcha_settings'] == '1' ) {
 			$response = json_decode( $response );
 			if ( $response->success == false ) {
 				$error_flag = 1;
-				$error_message = ($ap_settings['math_captcha_error_message'] != '') ? esc_attr( $ap_settings['math_captcha_error_message'] ) : __( 'Please verify that you are a human.', 'anonymous-post' );
+				$error_message = ($ap_settings['math_captcha_error_message'] != '') ? esc_attr( $ap_settings['math_captcha_error_message'] ) : __( 'Please verify that you are a human.', 'accesspress-anonymous-post' );
 				$error->captcha = $error_message;
 			}
 		}
@@ -46,14 +46,14 @@ if ( $ap_settings['captcha_settings'] == '1' ) {
 //if captcha is disabled or captcha has been entered correctly
 if ( $error_flag == 0 ) {
 	if ( $ap_form_post_title == '' ) {//if post title is left blank
-		$post_title_error = __( 'This field is required', 'anonymous-post' );
+		$post_title_error = __( 'This field is required', 'accesspress-anonymous-post' );
 		$error->title = $post_title_error;
 		$error_flag = 1;
 	}
 
 	if ( $ap_form_content == '' ) {//if post content is left blank
-		$post_title_error = __( 'This field is required', 'anonymous-post' );
-		$error->content = __( 'This field is required', 'anonymous-post' );
+		$post_title_error = __( 'This field is required', 'accesspress-anonymous-post' );
+		$error->content = __( 'This field is required', 'accesspress-anonymous-post' );
 		$error_flag = 1;
 	}
 	if ( in_array( 'post_image', $ap_settings['form_included_fields'] ) ) {//if post image is enabled in form
@@ -62,7 +62,7 @@ if ( $error_flag == 0 ) {
 			$ext_array = explode( '.', $image_name );
 			$ext = end( $ext_array );
 			if ( !($ext == 'jpeg' || $ext == 'png' || $ext == 'jpg' || $ext == 'gif' || $ext == 'JPEG' || $ext == 'PNG' || $ext == 'JPG') ) {//if users upload invalid file type
-				$error->image = __( 'Invalid File Type', 'anonymous-post' );
+				$error->image = __( 'Invalid File Type', 'accesspress-anonymous-post' );
 				$error_flag = 1;
 				$image_error_flag = 1;
 			}
@@ -165,7 +165,7 @@ if ( $error_flag == 0 ) {
 				$this->send_admin_notification( $post_id, $ap_form_post_title );
 			}
 			$success = new stdClass();
-			$success->msg = ($ap_settings['post_submission_message'] == '') ? __( 'Hi there, Thank you for submitting a post.', 'anonymous-post' ) : $ap_settings['post_submission_message'];
+			$success->msg = ($ap_settings['post_submission_message'] == '') ? __( 'Hi there, Thank you for submitting a post.', 'accesspress-anonymous-post' ) : $ap_settings['post_submission_message'];
 			$_SESSION['ap_form_success_msg'] = $success->msg;
 			wp_redirect( esc_url( $_POST['redirect_url'] ) );
 			exit;

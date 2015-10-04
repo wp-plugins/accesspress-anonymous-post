@@ -163,7 +163,7 @@ $ap_settings['math_captcha_label'] = $math_captcha_label;
 $ap_settings['google_captcha_sitekey'] = $google_captcha_sitekey;
 $ap_settings['google_captcha_secretkey'] = $google_captcha_secretkey;
 $update_option_check = update_option('ap_settings',$ap_settings);
-$_SESSION['ap_message'] = __('Settings Saved Successfully.','anonymous-post'); 
+$_SESSION['ap_message'] = __('Settings Saved Successfully.','accesspress-anonymous-post'); 
 wp_redirect(admin_url().'admin.php?page=anonymous-post');
 exit;
 

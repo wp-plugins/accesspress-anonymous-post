@@ -1,5 +1,5 @@
 <div class="ap-tabs-board" id="board-about-settings" style="display: none;">
-	<h2><?php _e('About Us','anonymous-post');?></h2>
+	<h2><?php _e('About Us','accesspress-anonymous-post');?></h2>
 	<div class="ap-tab-wrapper">
 		<p><strong>AccessPress Anonymous Post</strong> - is a FREE WordPress Plugin by AccessPress Themes. </p>
 
@@ -23,14 +23,14 @@
 
 						<h3>Other products by AccessPress themes </h3>
 						<div class="product">
-						<div class="logo-product"><img src="<?php echo AP_IMAGE_DIR;?>/aplite.png" alt="<?php esc_attr_e('AccessPress Anonymous Post','anonymous-post'); ?>" /></div>
+						<div class="logo-product"><img src="<?php echo AP_IMAGE_DIR;?>/aplite.png" alt="<?php esc_attr_e('AccessPress Anonymous Post','accesspress-anonymous-post'); ?>" /></div>
 						<div class="productext"><p><strong>AccessPress Lite</strong> - A very popular Free WordPress theme, available in WordPress.org<br />
 							<a href="http://accesspressthemes.com/wordpress-themes/accesspress-lite/" target="_blank">http://accesspressthemes.com/wordpress-themes/accesspress-lite/</a></p>
 						</div>
 						</div>
 
 						<div class="product">
-						<div class="logo-product"><img src="<?php echo AP_IMAGE_DIR;?>/appro.png" alt="<?php esc_attr_e('AccessPress Anonymous Post','anonymous-post'); ?>" /></div>
+						<div class="logo-product"><img src="<?php echo AP_IMAGE_DIR;?>/appro.png" alt="<?php esc_attr_e('AccessPress Anonymous Post','accesspress-anonymous-post'); ?>" /></div>
 						<div class="productext"><p><strong>AccessPress Pro</strong> - Premium version of AccessPress lite<br />
 							<a href="http://accesspressthemes.com/wordpress-themes/accesspress-lite/" target="_blank">http://accesspressthemes.com/wordpress-themes/accesspress-pro/</a></p>
 						</div>
