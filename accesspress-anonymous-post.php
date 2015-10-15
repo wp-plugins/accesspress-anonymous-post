@@ -4,7 +4,7 @@ defined('ABSPATH') or die("No script kiddies please!");
  * Plugin Name:AccessPress Anonymous Post
  * Plugin URI: http://accesspressthemes.com/wordpress-plugins/accesspress-anonymous-post/
  * Description: A plugin that provides the ability to publish post from frontend with or without login anonymously using a simple html5 form from anywhere of the site with the help of shortcode and various backend settings.
- * Version:2.4.4
+ * Version:2.4.5
  * Author:AccessPress Themes
  * Author URI:http://accesspressthemes.com/
  * Text Domain: accesspress-anonymous-post
@@ -31,7 +31,7 @@ defined('ABSPATH') or die("No script kiddies please!");
  }
  if(!defined('AP_VERSION'))
  {
-    define('AP_VERSION','2.4.4');
+    define('AP_VERSION','2.4.5');
  }
   
  if(!class_exists('AP_Class'))
@@ -127,7 +127,7 @@ defined('ABSPATH') or die("No script kiddies please!");
         //starts the session with the call of init hook
         function session_init()
         {
-            if(!session_id())
+            if(!session_id() && !headers_sent())
             {
                 session_start();
             }
@@ -351,20 +351,26 @@ defined('ABSPATH') or die("No script kiddies please!");
        
        //returns only logged in user related media items
        function restrict_media_library( $wp_query_obj ) {
-        
+        if(is_user_logged_in()){
             global $current_user, $pagenow;
+            if(isset($current_user->caps)){
              $caps = $current_user->caps;
-             reset($caps);
-             $user_role = key($caps);
-             if($user_role!='administrator'){
-             if( !is_a( $current_user, 'WP_User') )
-            return;
-            if( 'admin-ajax.php' != $pagenow || $_REQUEST['action'] != 'query-attachments' )
-            return;
-            if( !current_user_can('manage_media_library') )
-            $wp_query_obj->set('author', $current_user->ID );
-            return;
-                }
+             if(is_array($caps)){
+                        reset($caps);
+                         $user_role = key($caps);
+                         if($user_role!='administrator'){
+                         if( !is_a( $current_user, 'WP_User') )
+                        return;
+                        if( 'admin-ajax.php' != $pagenow || $_REQUEST['action'] != 'query-attachments' )
+                        return;
+                        if( !current_user_can('manage_media_library') )
+                        $wp_query_obj->set('author', $current_user->ID );
+                        return;
+                        }
+                    }
+                }   
+            }
+             
             }
           
             
