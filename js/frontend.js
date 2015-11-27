@@ -114,7 +114,7 @@
             }
             $('.ap-form-wrapper select').each(function () {
 
-                if ($(this).hasClass('ap-required-field') && $(this).val() == '1')
+                if ($(this).hasClass('ap-required-field') && $(this).val() == '')
                 {
                     error_flag = 1;
                     var error_message = $(this).attr('data-required-message');
